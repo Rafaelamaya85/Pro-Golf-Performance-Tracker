@@ -1,0 +1,111 @@
+<div style={{width: 1443, height: 1014, padding: 10, background: '#0B0B0B', overflow: 'hidden', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 65, display: 'inline-flex'}}>
+  <div style={{width: 1197, position: 'relative', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10, display: 'inline-flex'}}>
+    <div style={{alignSelf: 'stretch', position: 'relative', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10, display: 'flex'}}>
+      <div style={{alignSelf: 'stretch', height: 155, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 100, display: 'inline-flex', flexWrap: 'wrap', alignContent: 'flex-start'}}>
+        <div style={{width: 1420, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10, display: 'inline-flex'}}>
+          <div style={{alignSelf: 'stretch', paddingTop: 40, paddingBottom: 40, flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-end', gap: 10, display: 'flex'}}>
+            <div style={{alignSelf: 'stretch', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10, display: 'flex'}}>
+              <div style={{alignSelf: 'stretch', height: 63, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex'}}>
+                <div style={{alignSelf: 'stretch', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 438, display: 'inline-flex'}}>
+                  <div style={{width: 266, height: 63, color: 'white', fontSize: 32, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>The Heat  Index</div>
+                  <div style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 15, display: 'flex'}}>
+                    <div style={{width: 174, height: 57, color: 'white', fontSize: 32, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>Rankings</div>
+                    <div style={{width: 202, height: 46, color: 'white', fontSize: 32, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>Compare</div>
+                    <div style={{width: 98, height: 39, color: 'white', fontSize: 32, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>About</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{width: 365, height: 407, padding: 10, left: 31, top: 133, position: 'absolute', overflow: 'hidden', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
+        <div style={{width: 274, height: 47, color: 'white', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>5 Hottest Golfers - 2026 Season</div>
+        <div style={{width: 325, height: 37, color: 'white', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>Ranked By Performance, not Reputation</div>
+        <div style={{width: 378, height: 44, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'inline-flex'}}>
+          <div style={{width: 126, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10, display: 'inline-flex'}}>
+            <div style={{alignSelf: 'stretch', paddingLeft: 20, paddingRight: 20, paddingTop: 12, paddingBottom: 12, background: 'white', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
+              <div style={{width: 86, height: 18, color: '#0B0B0B', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>Pga Tour</div>
+            </div>
+          </div>
+          <div style={{width: 128, height: 42, paddingLeft: 20, paddingRight: 20, paddingTop: 12, paddingBottom: 12, background: 'white', justifyContent: 'center', alignItems: 'flex-start', gap: 10, display: 'flex'}}>
+            <div style={{width: 100, height: 32, color: '#0B0B0B', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>LPGA Tour</div>
+          </div>
+        </div>
+        <div style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10, display: 'inline-flex'}}>
+          <div style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'flex'}}>
+            <div style={{width: 324, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'flex'}}>
+              <div style={{width: 146, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 11, display: 'inline-flex'}}>
+                <div style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 32, display: 'inline-flex'}}>
+                  <div style={{width: 112, height: 99, background: '#0B0B0B'}} />
+                </div>
+                <div style={{alignSelf: 'stretch', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex'}}>
+                  <div style={{alignSelf: 'stretch', height: 76, color: 'white', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>Scottie Scheffler                   1 Win , 3 top 10’s</div>
+                </div>
+              </div>
+              <div style={{flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', display: 'inline-flex'}}>
+                <div style={{width: 121, height: 108, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'flex'}}>
+                  <div style={{width: 112, height: 84, background: '#0B0B0B'}} />
+                </div>
+                <div style={{width: 146, height: 65, color: 'white', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>Nelly Korda                 1 Win, 4 top 10’s</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{width: 248, height: 336, position: 'relative'}} />
+      </div>
+    </div>
+    <div style={{width: 1200, height: 350, left: -1, top: 562, position: 'absolute', background: '#F5F5F5', overflow: 'hidden'}}>
+      <div style={{width: 59, height: 18, left: 18, top: 25, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>RANK </div>
+      <div style={{width: 68, height: 18, left: 103, top: 25, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>Player</div>
+      <div style={{width: 56, height: 20, left: 256, top: 28, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>Score </div>
+      <div style={{width: 88, height: 15, left: 344, top: 28, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>Key Stat</div>
+      <div style={{width: 47, height: 28, left: 30, top: 72, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>#1</div>
+      <div style={{width: 129, height: 26, left: 105, top: 74, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Kim Hyo-Joo</div>
+      <div style={{width: 130, height: 24, left: 344, top: 76, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>2 Wins</div>
+      <div style={{width: 61, height: 26, left: 258, top: 74, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>19</div>
+      <div style={{width: 47, height: 22, left: 30, top: 113, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>#2</div>
+      <div style={{width: 141, height: 28, left: 103, top: 115, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Nelly Korda</div>
+      <div style={{width: 38, height: 30, left: 256, top: 113, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>17</div>
+      <div style={{width: 95, height: 34, left: 344, top: 113, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>4 top 10’s</div>
+      <div style={{width: 31, height: 27, left: 30, top: 157, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>#2</div>
+      <div style={{width: 31, height: 22, left: 30, top: 203, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>#4</div>
+      <div style={{width: 31, height: 27, left: 30, top: 241, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>#4</div>
+      <div style={{width: 138, height: 26, left: 95, top: 157, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Jeeno Thitikul</div>
+      <div style={{width: 31, height: 22, left: 259, top: 154, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>17</div>
+      <div style={{width: 113, height: 23, left: 344, top: 153, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>4 Top 10’s</div>
+      <div style={{width: 157, height: 17, left: 92, top: 203, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Lauren Coughlin</div>
+      <div style={{width: 48, height: 22, left: 259, top: 196, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>14</div>
+      <div style={{width: 129, height: 27, left: 344, top: 199, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>3 top 10’s</div>
+      <div style={{width: 120, height: 24, left: 98, top: 244, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Mi Hyang Lee</div>
+      <div style={{width: 48, height: 23, left: 259, top: 245, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>14</div>
+      <div style={{width: 99, height: 22, left: 340, top: 243, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>3 Top 10’S</div>
+      <div style={{width: 95, height: 47, left: 469, top: 12, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>LPGA HEAT INDEX </div>
+      <div style={{width: 64, height: 26, left: 605, top: 20, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>Rank</div>
+      <div style={{width: 121, height: 27, left: 696, top: 21, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>Player</div>
+      <div style={{width: 63, height: 26, left: 858, top: 22, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>Score</div>
+      <div style={{width: 68, height: 26, left: 954, top: 22, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '800', wordWrap: 'break-word'}}>Key Stat </div>
+      <div style={{width: 44, height: 26, left: 609, top: 74, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>#1</div>
+      <div style={{width: 30, height: 31, left: 607, top: 122, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>#1</div>
+      <div style={{width: 36, height: 29, left: 605, top: 165, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>#1</div>
+      <div style={{width: 31, height: 23, left: 605, top: 212, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>#4</div>
+      <div style={{width: 28, height: 27, left: 605, top: 256, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>#5</div>
+      <div style={{width: 141, height: 21, left: 686, top: 74, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Scottie Scheffler</div>
+      <div style={{width: 122, height: 17, left: 686, top: 120, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Chris Gotterup</div>
+      <div style={{width: 136, height: 25, left: 686, top: 165, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Jacob Bridgeman</div>
+      <div style={{width: 115, height: 25, left: 689, top: 210, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Jake Knapp</div>
+      <div style={{width: 131, height: 17, left: 686, top: 256, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>Collin Morikawa</div>
+      <div style={{width: 55, height: 21, left: 847, top: 72, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>14</div>
+      <div style={{left: 847, top: 122, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>14</div>
+      <div style={{width: 39, height: 20, left: 847, top: 162, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>14</div>
+      <div style={{width: 30, height: 22, left: 847, top: 202, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>12</div>
+      <div style={{width: 28, height: 19, left: 848, top: 256, position: 'absolute', color: 'black', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>9</div>
+      <div style={{width: 98, height: 43, left: 1092, top: 5, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>PGA Heat Index</div>
+      <div style={{width: 102, height: 29, left: 946, top: 71, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>3 top 10’s</div>
+      <div style={{width: 98, height: 26, left: 950, top: 121, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>2 Wins</div>
+      <div style={{width: 100, height: 24, left: 948, top: 160, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>3 Top 10’s</div>
+      <div style={{width: 100, height: 24, left: 948, top: 203, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>4 Top 10’s</div>
+      <div style={{width: 153, height: 21, left: 950, top: 250, position: 'absolute', color: 'black', fontSize: 18, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>1 Win, 2 top 10’s</div>
+    </div>
+  </div>
+</div>
