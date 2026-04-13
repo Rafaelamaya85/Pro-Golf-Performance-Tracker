@@ -11,9 +11,9 @@
       background-color: #f4f4f4;
       margin: 0;
       padding: 20px;
+      color: #222;
     }
 
-    /* ✅ SIDE NAV */
     .side-nav {
       position: fixed;
       top: 120px;
@@ -29,7 +29,7 @@
       display: block;
       color: white;
       text-decoration: none;
-      padding: 12px 10px;
+      padding: 12px;
       margin-bottom: 10px;
       background-color: #333;
       border-radius: 8px;
@@ -41,66 +41,135 @@
       background-color: #555;
     }
 
-    /* ✅ PUSH CONTENT OVER */
     .main-content {
       margin-left: 210px;
+      max-width: 900px;
     }
 
-    /* ✅ MATCH YOUR MAIN PAGE STYLE */
-    h1 {
+    .page-header {
       text-align: center;
-      margin-bottom: 5px;
+      margin-bottom: 30px;
     }
 
-    h3 {
-      text-align: center;
-      font-weight: normal;
-      color: #555;
+    .page-header h1 {
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      color: #666;
       margin-top: 0;
-      margin-bottom: 25px;
     }
 
     .content-box {
-      background: white;
-      padding: 20px;
-      border-left: 5px solid #222;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      max-width: 700px;
-      margin: 0 auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      line-height: 1.7;
     }
 
-    p {
-      font-size: 18px;
-      color: #333;
-      text-align: center;
+    h2 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      font-weight: bold;
     }
   </style>
 </head>
-
 <body>
 
-<!-- ✅ SIDEBAR -->
-<div class="side-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="past-rankings.html">Past Rankings</a>
-</div>
-
-<!-- ✅ MAIN CONTENT -->
-<div class="main-content">
-
-  <!-- Title -->
-  <h1>🔥 The Heat Index</h1>
-  <h3>About the Project</h3>
-
-  <!-- Content Box -->
-  <div class="content-box">
-    <p>
-      Page where I will explain why this ranking is needed.
-    </p>
+  <div class="side-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="past-rankings.html">Past Rankings</a>
   </div>
 
-</div>
+  <div class="main-content">
+    <div class="page-header">
+      <h1>About The Heat Index</h1>
+      <p>A current-season golf ranking system built to show who is hottest right now.</p>
+    </div>
+
+    <div class="content-box">
+      <h2>Heat Index vs. World Golf Rankings (OWGR &amp; Rolex Rankings)</h2>
+
+      <p>
+        The <span class="highlight">Heat Index</span> is designed to answer a simple question:
+        <span class="highlight">Who is playing the best golf right now?</span>
+      </p>
+
+      <p>
+        Traditional systems like the <span class="highlight">Official World Golf Ranking (OWGR)</span> for men
+        and the <span class="highlight">Rolex Women’s World Golf Rankings</span> for women are built on
+        long-term performance. These rankings consider results over an extended period of time, often including
+        performances from previous seasons. While this rewards consistency, it can also make the rankings slow to
+        adjust to current form.
+      </p>
+
+      <p>
+        For example, a player who had a dominant season last year may still be ranked near the top, even if they
+        are not playing their best right now. Meanwhile, a player who is currently winning events and consistently
+        finishing near the top may not immediately see that performance reflected in those rankings.
+      </p>
+
+      <p>
+        The <span class="highlight">Heat Index is different.</span> It focuses strictly on
+        <span class="highlight">current-season performance</span>, using a simple and transparent formula built around:
+      </p>
+
+      <ul>
+        <li><span class="highlight">Wins</span> (highest weight)</li>
+        <li><span class="highlight">Top 10 finishes</span></li>
+        <li><span class="highlight">Shots gained performance</span> (top 10 in a given week)</li>
+        <li><span class="highlight">Cuts made</span></li>
+        <li><span class="highlight">Cuts missed</span> (negative impact)</li>
+      </ul>
+
+      <p>
+        These metrics are combined into a season-long score that highlights who is performing best right now,
+        not who performed best months or years ago.
+      </p>
+
+      <p>
+        This approach mirrors how rankings work in other major sports. In leagues like the NFL or NBA, each season
+        starts fresh. A championship team does not carry over wins or rankings from the previous year. Instead,
+        power rankings reset and are based on current performance, current talent, roster changes, and how teams
+        are expected to perform in the present season.
+      </p>
+
+      <p>
+        The Heat Index brings that same concept to golf. Rather than relying on older results, it resets the focus
+        to the current season so users can better understand who is actually in top form today.
+      </p>
+
+      <p>
+        By focusing on the current season, the Heat Index allows users to:
+      </p>
+
+      <ul>
+        <li>Identify who is <span class="highlight">hot right now</span></li>
+        <li>Track who is <span class="highlight">consistently performing well this season</span></li>
+        <li>Compare players based on <span class="highlight">current results, not past reputation</span></li>
+        <li>Make more informed decisions when evaluating players and recent form</li>
+      </ul>
+
+      <p>
+        Instead of relying on outdated results, the Heat Index delivers a
+        <span class="highlight">real-time snapshot of performance</span>, making it a more accurate reflection
+        of the current state of golf.
+      </p>
+    </div>
+  </div>
 
 </body>
 </html>
