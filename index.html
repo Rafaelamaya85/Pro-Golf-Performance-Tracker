@@ -103,6 +103,20 @@
         max-width: 250px;
       }
     }
+    .carousel-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto 30px auto;
+  text-align: center;
+}
+
+.carousel-container img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
   </style>
 </head>
 
@@ -126,6 +140,11 @@
     <button onclick="showSection('pga')">PGA Only</button>
     <button onclick="showSection('lpga')">LPGA Only</button>
   </div>
+  <div class="carousel-container">
+  <img id="player-carousel" 
+       src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp" 
+       alt="Featured player">
+</div>
 
   <div id="pga-section" class="section">
   <h2>PGA Top 5</h2>
@@ -274,6 +293,23 @@
         lpga.style.display = "block";
       }
     }
+    const carouselImages = [
+  "https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp",
+  "https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/korda_nelly_hs24_470x486.jpg"
+];
+
+let currentImageIndex = 0;
+
+function rotateCarousel() {
+  currentImageIndex++;
+  if (currentImageIndex >= carouselImages.length) {
+    currentImageIndex = 0;
+  }
+
+  document.getElementById("player-carousel").src = carouselImages[currentImageIndex];
+}
+
+setInterval(rotateCarousel, 3000);
   </script>
 <div style="text-align:center; margin-top:40px;">
   <img 
