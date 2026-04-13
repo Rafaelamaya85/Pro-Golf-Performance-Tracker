@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About - The Heat Index</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
@@ -14,15 +18,21 @@
       color: #222;
     }
 
+    .page-wrapper {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
     .side-nav {
-      position: fixed;
-      top: 120px;
-      left: 20px;
-      width: 160px;
+      width: 180px;
       background-color: #222;
       padding: 15px 10px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 20px;
+      flex-shrink: 0;
     }
 
     .side-nav a {
@@ -42,8 +52,9 @@
     }
 
     .main-content {
-      margin-left: 210px;
-      max-width: 900px;
+      flex: 1;
+      min-width: 0;
+      max-width: 1000px;
     }
 
     .page-header {
@@ -103,95 +114,120 @@
       font-size: 18px;
       font-weight: bold;
     }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 12px;
+      }
+
+      .page-wrapper {
+        flex-direction: column;
+      }
+
+      .side-nav {
+        width: 100%;
+        position: static;
+      }
+
+      .content-box {
+        padding: 20px;
+      }
+
+      .formula-box p {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div class="side-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="past-rankings.html">Past Rankings</a>
-  </div>
-
-  <div class="main-content">
-    <div class="page-header">
-      <h1>About The Heat Index</h1>
-      <p>A current-season golf ranking system built to show who is hottest right now.</p>
+  <div class="page-wrapper">
+    <div class="side-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="past-rankings.html">Past Rankings</a>
     </div>
 
-    <div class="content-box">
-      <h2>Heat Index vs. World Golf Rankings (OWGR &amp; Rolex Rankings)</h2>
-
-      <p>
-        The <span class="highlight">Heat Index</span> is designed to answer a simple question:
-        <span class="highlight">Who is playing the best golf right now?</span>
-      </p>
-
-      <p>
-        Traditional systems like the <span class="highlight">Official World Golf Ranking (OWGR)</span> for men
-        and the <span class="highlight">Rolex Women’s World Golf Rankings</span> for women are built on
-        long-term performance. These rankings consider results over an extended period of time, often including
-        performances from previous seasons. While this rewards consistency, it can also make the rankings slow to
-        adjust to current form.
-      </p>
-
-      <p>
-        For example, a player who had a dominant season last year may still be ranked near the top, even if they
-        are not playing their best right now. Meanwhile, a player who is currently winning events and consistently
-        finishing near the top may not immediately see that performance reflected in those rankings.
-      </p>
-
-      <p>
-        The <span class="highlight">Heat Index is different.</span> It focuses strictly on
-        <span class="highlight">current-season performance</span> and uses a simple formula to rank players based
-        on what they have done this season alone.
-      </p>
-
-      <div class="formula-box">
-        <p>Heat Index Score = (Wins × 4) + (Top 10s × 2) + (Majors Won × 8) − (Cuts Missed × 2)</p>
+    <div class="main-content">
+      <div class="page-header">
+        <h1>About The Heat Index</h1>
+        <p>A current-season golf ranking system built to show who is hottest right now.</p>
       </div>
 
-      <h3>Metrics Used in the Formula</h3>
-      <ul>
-        <li><span class="highlight">Wins × 4</span> — rewards players for winning tournaments</li>
-        <li><span class="highlight">Top 10s × 2</span> — rewards consistency and strong finishes</li>
-        <li><span class="highlight">Majors Won × 8</span> — gives bonus weight to the biggest events in golf</li>
-        <li><span class="highlight">Cuts Missed × -2</span> — penalizes inconsistency and poor finishes</li>
-      </ul>
+      <div class="content-box">
+        <h2>Heat Index vs. World Golf Rankings (OWGR &amp; Rolex Rankings)</h2>
 
-      <p>
-        These metrics combine to create a season-long score that highlights who is performing best
-        <span class="highlight">right now</span>, not who built their ranking off results from past seasons.
-      </p>
+        <p>
+          The <span class="highlight">Heat Index</span> is designed to answer a simple question:
+          <span class="highlight">Who is playing the best golf right now?</span>
+        </p>
 
-      <p>
-        This approach mirrors how rankings work in other major sports. In leagues like the NFL or NBA, each season
-        starts fresh. A championship team does not carry over wins or ranking points from the previous year. Instead,
-        power rankings reset and are based on current talent, current performance, and what the team looks like in
-        the present season.
-      </p>
+        <p>
+          Traditional systems like the <span class="highlight">Official World Golf Ranking (OWGR)</span> for men
+          and the <span class="highlight">Rolex Women’s World Golf Rankings</span> for women are built on
+          long-term performance. These rankings consider results over an extended period of time, often including
+          performances from previous seasons. While this rewards consistency, it can also make the rankings slow to
+          adjust to current form.
+        </p>
 
-      <p>
-        The Heat Index brings that same concept to golf. Rather than relying on older results, it resets the focus
-        to the current season so users can better understand who is actually in top form today.
-      </p>
+        <p>
+          For example, a player who had a dominant season last year may still be ranked near the top, even if they
+          are not playing their best right now. Meanwhile, a player who is currently winning events and consistently
+          finishing near the top may not immediately see that performance reflected in those rankings.
+        </p>
 
-      <p>
-        By focusing on the current season, the Heat Index allows users to:
-      </p>
+        <p>
+          The <span class="highlight">Heat Index is different.</span> It focuses strictly on
+          <span class="highlight">current-season performance</span> and uses a simple formula to rank players based
+          on what they have done this season alone.
+        </p>
 
-      <ul>
-        <li>Identify who is <span class="highlight">hot right now</span></li>
-        <li>Track who is <span class="highlight">consistently performing well this season</span></li>
-        <li>Compare players based on <span class="highlight">current results, not past reputation</span></li>
-        <li>Make more informed decisions when evaluating players and recent form</li>
-      </ul>
+        <div class="formula-box">
+          <p>Heat Index Score = (Wins × 4) + (Top 10s × 2) + (Majors Won × 8) − (Cuts Missed × 2)</p>
+        </div>
 
-      <p>
-        Instead of relying on outdated results, the Heat Index delivers a
-        <span class="highlight">real-time snapshot of performance</span>, making it a more accurate reflection
-        of the current state of golf.
-      </p>
+        <h3>Metrics Used in the Formula</h3>
+        <ul>
+          <li><span class="highlight">Wins × 4</span> — rewards players for winning tournaments</li>
+          <li><span class="highlight">Top 10s × 2</span> — rewards consistency and strong finishes</li>
+          <li><span class="highlight">Majors Won × 8</span> — gives bonus weight to the biggest events in golf</li>
+          <li><span class="highlight">Cuts Missed × -2</span> — penalizes inconsistency and poor finishes</li>
+        </ul>
+
+        <p>
+          These metrics combine to create a season-long score that highlights who is performing best
+          <span class="highlight">right now</span>, not who built their ranking off results from past seasons.
+        </p>
+
+        <p>
+          This approach mirrors how rankings work in other major sports. In leagues like the NFL or NBA, each season
+          starts fresh. A championship team does not carry over wins or ranking points from the previous year. Instead,
+          power rankings reset and are based on current talent, current performance, and what the team looks like in
+          the present season.
+        </p>
+
+        <p>
+          The Heat Index brings that same concept to golf. Rather than relying on older results, it resets the focus
+          to the current season so users can better understand who is actually in top form today.
+        </p>
+
+        <p>
+          By focusing on the current season, the Heat Index allows users to:
+        </p>
+
+        <ul>
+          <li>Identify who is <span class="highlight">hot right now</span></li>
+          <li>Track who is <span class="highlight">consistently performing well this season</span></li>
+          <li>Compare players based on <span class="highlight">current results, not past reputation</span></li>
+          <li>Make more informed decisions when evaluating players and recent form</li>
+        </ul>
+
+        <p>
+          Instead of relying on outdated results, the Heat Index delivers a
+          <span class="highlight">real-time snapshot of performance</span>, making it a more accurate reflection
+          of the current state of golf.
+        </p>
+      </div>
     </div>
   </div>
 
