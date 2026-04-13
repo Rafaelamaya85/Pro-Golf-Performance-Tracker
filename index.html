@@ -21,6 +21,7 @@
       background-color: #222;
       padding: 15px 10px;
       border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .side-nav a {
@@ -43,95 +44,288 @@
       margin-left: 210px;
     }
 
-    h1, h3 {
+    h1 {
       text-align: center;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      text-align: center;
+      font-weight: normal;
+      color: #555;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #222;
+    }
+
+    .formula {
+      background: white;
+      padding: 15px;
+      margin: 20px 0 30px 0;
+      border-left: 5px solid #222;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 
     .filter-buttons {
       display: flex;
       justify-content: center;
       gap: 10px;
-      margin-bottom: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .filter-buttons button {
+      padding: 10px 18px;
+      border: none;
+      background-color: #222;
+      color: white;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .filter-buttons button:hover {
+      background-color: #444;
+    }
+
+    .section {
+      display: block;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      background: white;
+      margin-bottom: 30px;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 
     th, td {
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #ddd;
       text-align: center;
     }
 
     th {
-      background: #222;
+      background-color: #222;
       color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .carousel-container {
+      width: 100%;
+      max-width: 500px;
+      margin: 20px auto 30px auto;
+      text-align: center;
+    }
+
+    .carousel-container img {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .bottom-image {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .bottom-image img {
+      width: 250px;
+      border-radius: 10px;
     }
   </style>
 </head>
 
 <body>
 
-<!-- ✅ SIDE NAV -->
 <div class="side-nav">
   <a href="index.html">Home</a>
-  <a href="about.html">About</a> <!-- THIS IS YOUR LINK -->
+  <a href="about.html">About</a>
   <a href="past-rankings.html">Past Rankings</a>
 </div>
 
 <div class="main-content">
 
-  <h1>🔥 The Heat Index</h1>
-  <h3>Top 5 Hottest Golfers - 2026</h3>
+  <div style="display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <h1 style="margin:0;">🔥 The Heat Index</h1>
+    <img src="5c9f6f50-6b43-4903-ac60-b2fd87f25cb1.png" width="70" style="border-radius:10px;" alt="Heat Index Logo">
+  </div>
+
+  <h3>The 5 Hottest Golfers - 2026 Season Ranked by Performance not Reputation!</h3>
+
+  <div class="formula">
+    Use the buttons below to filter the leaderboard by tour.
+  </div>
 
   <div class="filter-buttons">
-    <button onclick="showSection('all')">All</button>
-    <button onclick="showSection('pga')">PGA</button>
-    <button onclick="showSection('lpga')">LPGA</button>
+    <button onclick="showSection('all')">Show All</button>
+    <button onclick="showSection('pga')">PGA Only</button>
+    <button onclick="showSection('lpga')">LPGA Only</button>
   </div>
 
-  <!-- PGA -->
-  <div id="pga-section">
+  <div class="carousel-container">
+    <img
+      id="player-carousel"
+      src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp"
+      alt="Featured golfer">
+  </div>
+
+  <div id="pga-section" class="section">
     <h2>PGA Top 5</h2>
     <table>
-      <tr><th>Rank</th><th>Player</th><th>Score</th></tr>
-      <tr><td>1</td><td>Rory McIlroy</td><td>24</td></tr>
-      <tr><td>2</td><td>Morikawa</td><td>18</td></tr>
-      <tr><td>3</td><td>Scheffler</td><td>16</td></tr>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Player</th>
+          <th>Wins</th>
+          <th>Top 10s</th>
+          <th>Heat Index Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Rory McIlroy</td>
+          <td>3</td>
+          <td>6</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Collin Morikawa</td>
+          <td>1</td>
+          <td>7</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Scottie Scheffler</td>
+          <td>1</td>
+          <td>6</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Ludvig Åberg</td>
+          <td>1</td>
+          <td>4</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Sepp Straka</td>
+          <td>1</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
-  <!-- LPGA -->
-  <div id="lpga-section">
+  <div id="lpga-section" class="section">
     <h2>LPGA Top 5</h2>
     <table>
-      <tr><th>Rank</th><th>Player</th><th>Score</th></tr>
-      <tr><td>1</td><td>Nelly Korda</td><td>12</td></tr>
-      <tr><td>2</td><td>Jeeno</td><td>10</td></tr>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Player</th>
+          <th>Wins</th>
+          <th>Top 10s</th>
+          <th>Heat Index Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Nelly Korda</td>
+          <td>1</td>
+          <td>4</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jeeno Thitikul</td>
+          <td>1</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Lydia Ko</td>
+          <td>1</td>
+          <td>2</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Ayaka Furue</td>
+          <td>1</td>
+          <td>1</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Hae Ran Ryu</td>
+          <td>0</td>
+          <td>4</td>
+          <td>8</td>
+        </tr>
+      </tbody>
     </table>
+  </div>
+
+  <div class="bottom-image">
+    <img
+      src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/cd60404b-ffcb-44c3-a17d-cfdac3d272c6.png"
+      alt="Golf graphic">
   </div>
 
 </div>
 
 <script>
-function showSection(section) {
-  const pga = document.getElementById("pga-section");
-  const lpga = document.getElementById("lpga-section");
+  function showSection(section) {
+    const pga = document.getElementById("pga-section");
+    const lpga = document.getElementById("lpga-section");
 
-  if (section === "all") {
-    pga.style.display = "block";
-    lpga.style.display = "block";
-  } else if (section === "pga") {
-    pga.style.display = "block";
-    lpga.style.display = "none";
-  } else {
-    pga.style.display = "none";
-    lpga.style.display = "block";
+    if (section === "all") {
+      pga.style.display = "block";
+      lpga.style.display = "block";
+    } else if (section === "pga") {
+      pga.style.display = "block";
+      lpga.style.display = "none";
+    } else if (section === "lpga") {
+      pga.style.display = "none";
+      lpga.style.display = "block";
+    }
   }
-}
+
+  const carouselImages = [
+    "https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp",
+    "https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/korda_nelly_hs24_470x486.jpg"
+  ];
+
+  let currentImageIndex = 0;
+
+  function rotateCarousel() {
+    currentImageIndex++;
+    if (currentImageIndex >= carouselImages.length) {
+      currentImageIndex = 0;
+    }
+
+    document.getElementById("player-carousel").src = carouselImages[currentImageIndex];
+  }
+
+  setInterval(rotateCarousel, 3000);
 </script>
 
 </body>
