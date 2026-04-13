@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Past Rankings - The Heat Index</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
@@ -14,15 +18,21 @@
       color: #222;
     }
 
+    .page-wrapper {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
     .side-nav {
-      position: fixed;
-      top: 120px;
-      left: 20px;
-      width: 160px;
+      width: 180px;
       background-color: #222;
       padding: 15px 10px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 20px;
+      flex-shrink: 0;
     }
 
     .side-nav a {
@@ -42,8 +52,9 @@
     }
 
     .main-content {
-      margin-left: 210px;
-      max-width: 1000px;
+      flex: 1;
+      min-width: 0;
+      max-width: 1100px;
     }
 
     h1 {
@@ -108,10 +119,16 @@
       color: #222;
     }
 
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      margin-bottom: 25px;
+    }
+
     table {
       width: 100%;
+      min-width: 700px;
       border-collapse: collapse;
-      margin-bottom: 25px;
       background-color: white;
     }
 
@@ -144,182 +161,226 @@
     .back-top a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 12px;
+      }
+
+      .page-wrapper {
+        flex-direction: column;
+      }
+
+      .side-nav {
+        width: 100%;
+        position: static;
+      }
+
+      .week-section {
+        padding: 18px;
+      }
+
+      table {
+        min-width: 620px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      th, td {
+        font-size: 13px;
+        padding: 10px;
+      }
+
+      table {
+        min-width: 580px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div class="side-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="past-rankings.html">Past Rankings</a>
-  </div>
-
-  <div class="main-content" id="top">
-    <h1>Past Rankings</h1>
-    <h3>Top 5 Heat Index rankings from the previous three weeks</h3>
-
-    <div class="week-buttons">
-      <a href="#week1">Week Ending 4/5/2026</a>
-      <a href="#week2">Week Ending 3/29/2026</a>
-      <a href="#week3">Week Ending 3/22/2026</a>
+  <div class="page-wrapper">
+    <div class="side-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="past-rankings.html">Past Rankings</a>
     </div>
 
-    <!-- Week 1 -->
-    <div class="week-section" id="week1">
-      <h2 class="week-title">Week Ending 4/5/2026</h2>
-      <div class="week-note">Archived Heat Index rankings for the week ending 4/5/2026</div>
+    <div class="main-content" id="top">
+      <h1>Past Rankings</h1>
+      <h3>Top 5 Heat Index rankings from the previous three weeks</h3>
 
-      <h2>PGA Top 5</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Player</th>
-            <th>Wins</th>
-            <th>Top 10s</th>
-            <th>Majors Won</th>
-            <th>Cuts Missed</th>
-            <th>Heat Index Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>Rory McIlroy</td><td>2</td><td>6</td><td>0</td><td>1</td><td>18</td></tr>
-          <tr><td>2</td><td>Collin Morikawa</td><td>1</td><td>6</td><td>0</td><td>1</td><td>14</td></tr>
-          <tr><td>3</td><td>Scottie Scheffler</td><td>1</td><td>5</td><td>0</td><td>1</td><td>12</td></tr>
-          <tr><td>4</td><td>Ludvig Åberg</td><td>1</td><td>3</td><td>0</td><td>1</td><td>8</td></tr>
-          <tr><td>5</td><td>Sepp Straka</td><td>1</td><td>2</td><td>0</td><td>1</td><td>6</td></tr>
-        </tbody>
-      </table>
+      <div class="week-buttons">
+        <a href="#week1">Week Ending 4/5/2026</a>
+        <a href="#week2">Week Ending 3/29/2026</a>
+        <a href="#week3">Week Ending 3/22/2026</a>
+      </div>
 
-      <h2>LPGA Top 5</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Player</th>
-            <th>Wins</th>
-            <th>Top 10s</th>
-            <th>Majors Won</th>
-            <th>Cuts Missed</th>
-            <th>Heat Index Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>Nelly Korda</td><td>1</td><td>4</td><td>0</td><td>0</td><td>12</td></tr>
-          <tr><td>2</td><td>Jeeno Thitikul</td><td>1</td><td>3</td><td>0</td><td>0</td><td>10</td></tr>
-          <tr><td>3</td><td>Lydia Ko</td><td>1</td><td>2</td><td>0</td><td>0</td><td>8</td></tr>
-          <tr><td>4</td><td>Ayaka Furue</td><td>1</td><td>1</td><td>0</td><td>0</td><td>6</td></tr>
-          <tr><td>5</td><td>Hae Ran Ryu</td><td>0</td><td>4</td><td>0</td><td>0</td><td>8</td></tr>
-        </tbody>
-      </table>
+      <div class="week-section" id="week1">
+        <h2 class="week-title">Week Ending 4/5/2026</h2>
+        <div class="week-note">Archived Heat Index rankings for the week ending 4/5/2026</div>
 
-      <div class="back-top"><a href="#top">Back to top</a></div>
+        <h2>PGA Top 5</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Wins</th>
+                <th>Top 10s</th>
+                <th>Majors Won</th>
+                <th>Cuts Missed</th>
+                <th>Heat Index Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Rory McIlroy</td><td>2</td><td>6</td><td>0</td><td>1</td><td>18</td></tr>
+              <tr><td>2</td><td>Collin Morikawa</td><td>1</td><td>6</td><td>0</td><td>1</td><td>14</td></tr>
+              <tr><td>3</td><td>Scottie Scheffler</td><td>1</td><td>5</td><td>0</td><td>1</td><td>12</td></tr>
+              <tr><td>4</td><td>Ludvig Åberg</td><td>1</td><td>3</td><td>0</td><td>1</td><td>8</td></tr>
+              <tr><td>5</td><td>Sepp Straka</td><td>1</td><td>2</td><td>0</td><td>1</td><td>6</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>LPGA Top 5</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Wins</th>
+                <th>Top 10s</th>
+                <th>Majors Won</th>
+                <th>Cuts Missed</th>
+                <th>Heat Index Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Nelly Korda</td><td>1</td><td>4</td><td>0</td><td>0</td><td>12</td></tr>
+              <tr><td>2</td><td>Jeeno Thitikul</td><td>1</td><td>3</td><td>0</td><td>0</td><td>10</td></tr>
+              <tr><td>3</td><td>Lydia Ko</td><td>1</td><td>2</td><td>0</td><td>0</td><td>8</td></tr>
+              <tr><td>4</td><td>Ayaka Furue</td><td>1</td><td>1</td><td>0</td><td>0</td><td>6</td></tr>
+              <tr><td>5</td><td>Hae Ran Ryu</td><td>0</td><td>4</td><td>0</td><td>0</td><td>8</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="back-top"><a href="#top">Back to top</a></div>
+      </div>
+
+      <div class="week-section" id="week2">
+        <h2 class="week-title">Week Ending 3/29/2026</h2>
+        <div class="week-note">Archived Heat Index rankings for the week ending 3/29/2026</div>
+
+        <h2>PGA Top 5</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Wins</th>
+                <th>Top 10s</th>
+                <th>Majors Won</th>
+                <th>Cuts Missed</th>
+                <th>Heat Index Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Rory McIlroy</td><td>2</td><td>5</td><td>0</td><td>1</td><td>16</td></tr>
+              <tr><td>2</td><td>Collin Morikawa</td><td>1</td><td>5</td><td>0</td><td>1</td><td>12</td></tr>
+              <tr><td>3</td><td>Scottie Scheffler</td><td>1</td><td>4</td><td>0</td><td>1</td><td>10</td></tr>
+              <tr><td>4</td><td>Ludvig Åberg</td><td>1</td><td>3</td><td>0</td><td>1</td><td>8</td></tr>
+              <tr><td>5</td><td>Sepp Straka</td><td>1</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>LPGA Top 5</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Wins</th>
+                <th>Top 10s</th>
+                <th>Majors Won</th>
+                <th>Cuts Missed</th>
+                <th>Heat Index Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Nelly Korda</td><td>1</td><td>3</td><td>0</td><td>0</td><td>10</td></tr>
+              <tr><td>2</td><td>Jeeno Thitikul</td><td>1</td><td>2</td><td>0</td><td>0</td><td>8</td></tr>
+              <tr><td>3</td><td>Lydia Ko</td><td>1</td><td>1</td><td>0</td><td>0</td><td>6</td></tr>
+              <tr><td>4</td><td>Ayaka Furue</td><td>1</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
+              <tr><td>5</td><td>Hae Ran Ryu</td><td>0</td><td>3</td><td>0</td><td>0</td><td>6</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="back-top"><a href="#top">Back to top</a></div>
+      </div>
+
+      <div class="week-section" id="week3">
+        <h2 class="week-title">Week Ending 3/22/2026</h2>
+        <div class="week-note">Archived Heat Index rankings for the week ending 3/22/2026</div>
+
+        <h2>PGA Top 5</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Wins</th>
+                <th>Top 10s</th>
+                <th>Majors Won</th>
+                <th>Cuts Missed</th>
+                <th>Heat Index Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Rory McIlroy</td><td>1</td><td>5</td><td>0</td><td>1</td><td>12</td></tr>
+              <tr><td>2</td><td>Collin Morikawa</td><td>1</td><td>4</td><td>0</td><td>1</td><td>10</td></tr>
+              <tr><td>3</td><td>Scottie Scheffler</td><td>1</td><td>3</td><td>0</td><td>1</td><td>8</td></tr>
+              <tr><td>4</td><td>Ludvig Åberg</td><td>1</td><td>2</td><td>0</td><td>1</td><td>6</td></tr>
+              <tr><td>5</td><td>Hideki Matsuyama</td><td>1</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>LPGA Top 5</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Wins</th>
+                <th>Top 10s</th>
+                <th>Majors Won</th>
+                <th>Cuts Missed</th>
+                <th>Heat Index Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Nelly Korda</td><td>1</td><td>2</td><td>0</td><td>0</td><td>8</td></tr>
+              <tr><td>2</td><td>Jeeno Thitikul</td><td>1</td><td>1</td><td>0</td><td>0</td><td>6</td></tr>
+              <tr><td>3</td><td>Lydia Ko</td><td>1</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
+              <tr><td>4</td><td>Ayaka Furue</td><td>0</td><td>2</td><td>0</td><td>0</td><td>4</td></tr>
+              <tr><td>5</td><td>Hae Ran Ryu</td><td>0</td><td>2</td><td>0</td><td>1</td><td>2</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="back-top"><a href="#top">Back to top</a></div>
+      </div>
     </div>
-
-    <!-- Week 2 -->
-    <div class="week-section" id="week2">
-      <h2 class="week-title">Week Ending 3/29/2026</h2>
-      <div class="week-note">Archived Heat Index rankings for the week ending 3/29/2026</div>
-
-      <h2>PGA Top 5</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Player</th>
-            <th>Wins</th>
-            <th>Top 10s</th>
-            <th>Majors Won</th>
-            <th>Cuts Missed</th>
-            <th>Heat Index Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>Rory McIlroy</td><td>2</td><td>5</td><td>0</td><td>1</td><td>16</td></tr>
-          <tr><td>2</td><td>Collin Morikawa</td><td>1</td><td>5</td><td>0</td><td>1</td><td>12</td></tr>
-          <tr><td>3</td><td>Scottie Scheffler</td><td>1</td><td>4</td><td>0</td><td>1</td><td>10</td></tr>
-          <tr><td>4</td><td>Ludvig Åberg</td><td>1</td><td>3</td><td>0</td><td>1</td><td>8</td></tr>
-          <tr><td>5</td><td>Sepp Straka</td><td>1</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
-        </tbody>
-      </table>
-
-      <h2>LPGA Top 5</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Player</th>
-            <th>Wins</th>
-            <th>Top 10s</th>
-            <th>Majors Won</th>
-            <th>Cuts Missed</th>
-            <th>Heat Index Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>Nelly Korda</td><td>1</td><td>3</td><td>0</td><td>0</td><td>10</td></tr>
-          <tr><td>2</td><td>Jeeno Thitikul</td><td>1</td><td>2</td><td>0</td><td>0</td><td>8</td></tr>
-          <tr><td>3</td><td>Lydia Ko</td><td>1</td><td>1</td><td>0</td><td>0</td><td>6</td></tr>
-          <tr><td>4</td><td>Ayaka Furue</td><td>1</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
-          <tr><td>5</td><td>Hae Ran Ryu</td><td>0</td><td>3</td><td>0</td><td>0</td><td>6</td></tr>
-        </tbody>
-      </table>
-
-      <div class="back-top"><a href="#top">Back to top</a></div>
-    </div>
-
-    <!-- Week 3 -->
-    <div class="week-section" id="week3">
-      <h2 class="week-title">Week Ending 3/22/2026</h2>
-      <div class="week-note">Archived Heat Index rankings for the week ending 3/22/2026</div>
-
-      <h2>PGA Top 5</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Player</th>
-            <th>Wins</th>
-            <th>Top 10s</th>
-            <th>Majors Won</th>
-            <th>Cuts Missed</th>
-            <th>Heat Index Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>Rory McIlroy</td><td>1</td><td>5</td><td>0</td><td>1</td><td>12</td></tr>
-          <tr><td>2</td><td>Collin Morikawa</td><td>1</td><td>4</td><td>0</td><td>1</td><td>10</td></tr>
-          <tr><td>3</td><td>Scottie Scheffler</td><td>1</td><td>3</td><td>0</td><td>1</td><td>8</td></tr>
-          <tr><td>4</td><td>Ludvig Åberg</td><td>1</td><td>2</td><td>0</td><td>1</td><td>6</td></tr>
-          <tr><td>5</td><td>Hideki Matsuyama</td><td>1</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
-        </tbody>
-      </table>
-
-      <h2>LPGA Top 5</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Player</th>
-            <th>Wins</th>
-            <th>Top 10s</th>
-            <th>Majors Won</th>
-            <th>Cuts Missed</th>
-            <th>Heat Index Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>Nelly Korda</td><td>1</td><td>2</td><td>0</td><td>0</td><td>8</td></tr>
-          <tr><td>2</td><td>Jeeno Thitikul</td><td>1</td><td>1</td><td>0</td><td>0</td><td>6</td></tr>
-          <tr><td>3</td><td>Lydia Ko</td><td>1</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
-          <tr><td>4</td><td>Ayaka Furue</td><td>0</td><td>2</td><td>0</td><td>0</td><td>4</td></tr>
-          <tr><td>5</td><td>Hae Ran Ryu</td><td>0</td><td>2</td><td>0</td><td>1</td><td>2</td></tr>
-        </tbody>
-      </table>
-
-      <div class="back-top"><a href="#top">Back to top</a></div>
-    </div>
-
   </div>
 
 </body>
