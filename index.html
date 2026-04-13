@@ -60,6 +60,15 @@
     h2 {
       margin-top: 40px;
       color: #222;
+      text-align: center;
+    }
+
+    .update-note {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin-top: -10px;
+      margin-bottom: 15px;
     }
 
     .formula {
@@ -90,10 +99,6 @@
 
     .filter-buttons button:hover {
       background-color: #444;
-    }
-
-    .section {
-      display: block;
     }
 
     table {
@@ -158,7 +163,7 @@
 
   <div style="display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
     <h1 style="margin:0;">🔥 The Heat Index</h1>
-    <img src="5c9f6f50-6b43-4903-ac60-b2fd87f25cb1.png" width="70" style="border-radius:10px;" alt="Heat Index Logo">
+    <img src="5c9f6f50-6b43-4903-ac60-b2fd87f25cb1.png" width="70" style="border-radius:10px;">
   </div>
 
   <h3>The 5 Hottest Golfers - 2026 Season Ranked by Performance not Reputation!</h3>
@@ -176,12 +181,16 @@
   <div class="carousel-container">
     <img
       id="player-carousel"
-      src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp"
-      alt="Featured golfer">
+      src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp">
   </div>
 
-  <div id="pga-section" class="section">
+  <!-- PGA -->
+  <div id="pga-section">
     <h2>PGA Top 5</h2>
+    <div class="update-note">
+      Rankings updated to reflect Week Ending 4/12/2026
+    </div>
+
     <table>
       <thead>
         <tr>
@@ -193,47 +202,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Rory McIlroy</td>
-          <td>3</td>
-          <td>6</td>
-          <td>24</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Collin Morikawa</td>
-          <td>1</td>
-          <td>7</td>
-          <td>18</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Scottie Scheffler</td>
-          <td>1</td>
-          <td>6</td>
-          <td>16</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Ludvig Åberg</td>
-          <td>1</td>
-          <td>4</td>
-          <td>12</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Sepp Straka</td>
-          <td>1</td>
-          <td>3</td>
-          <td>10</td>
-        </tr>
+        <tr><td>1</td><td>Rory McIlroy</td><td>3</td><td>6</td><td>24</td></tr>
+        <tr><td>2</td><td>Collin Morikawa</td><td>1</td><td>7</td><td>18</td></tr>
+        <tr><td>3</td><td>Scottie Scheffler</td><td>1</td><td>6</td><td>16</td></tr>
+        <tr><td>4</td><td>Ludvig Åberg</td><td>1</td><td>4</td><td>12</td></tr>
+        <tr><td>5</td><td>Sepp Straka</td><td>1</td><td>3</td><td>10</td></tr>
       </tbody>
     </table>
   </div>
 
-  <div id="lpga-section" class="section">
+  <!-- LPGA -->
+  <div id="lpga-section">
     <h2>LPGA Top 5</h2>
+
     <table>
       <thead>
         <tr>
@@ -245,49 +226,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Nelly Korda</td>
-          <td>1</td>
-          <td>4</td>
-          <td>12</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jeeno Thitikul</td>
-          <td>1</td>
-          <td>3</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Lydia Ko</td>
-          <td>1</td>
-          <td>2</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Ayaka Furue</td>
-          <td>1</td>
-          <td>1</td>
-          <td>6</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Hae Ran Ryu</td>
-          <td>0</td>
-          <td>4</td>
-          <td>8</td>
-        </tr>
+        <tr><td>1</td><td>Nelly Korda</td><td>1</td><td>4</td><td>12</td></tr>
+        <tr><td>2</td><td>Jeeno Thitikul</td><td>1</td><td>3</td><td>10</td></tr>
+        <tr><td>3</td><td>Lydia Ko</td><td>1</td><td>2</td><td>8</td></tr>
+        <tr><td>4</td><td>Ayaka Furue</td><td>1</td><td>1</td><td>6</td></tr>
+        <tr><td>5</td><td>Hae Ran Ryu</td><td>0</td><td>4</td><td>8</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="bottom-image">
-    <img
-      src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/cd60404b-ffcb-44c3-a17d-cfdac3d272c6.png"
-      alt="Golf graphic">
+    <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/cd60404b-ffcb-44c3-a17d-cfdac3d272c6.png">
   </div>
 
 </div>
@@ -321,7 +270,6 @@
     if (currentImageIndex >= carouselImages.length) {
       currentImageIndex = 0;
     }
-
     document.getElementById("player-carousel").src = carouselImages[currentImageIndex];
   }
 
