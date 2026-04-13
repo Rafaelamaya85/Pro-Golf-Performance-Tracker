@@ -11,9 +11,9 @@
       background-color: #f4f4f4;
       margin: 0;
       padding: 20px;
+      color: #222;
     }
 
-    /* ✅ SIDE NAV */
     .side-nav {
       position: fixed;
       top: 120px;
@@ -29,7 +29,7 @@
       display: block;
       color: white;
       text-decoration: none;
-      padding: 12px 10px;
+      padding: 12px;
       margin-bottom: 10px;
       background-color: #333;
       border-radius: 8px;
@@ -41,51 +41,83 @@
       background-color: #555;
     }
 
-    /* ✅ PUSH CONTENT */
     .main-content {
       margin-left: 210px;
+      max-width: 1000px;
     }
 
-    /* ✅ MATCH STYLE */
     h1 {
       text-align: center;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
 
     h3 {
       text-align: center;
       font-weight: normal;
-      color: #555;
+      color: #666;
       margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    .week-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .week-buttons a {
+      background-color: #222;
+      color: white;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .week-buttons a:hover {
+      background-color: #444;
+    }
+
+    .week-section {
+      background-color: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 35px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .week-title {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .week-note {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
       margin-bottom: 25px;
     }
 
-    .content-box {
-      background: white;
-      padding: 20px;
-      border-left: 5px solid #222;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      max-width: 700px;
-      margin: 0 auto 30px auto;
-    }
-
-    p {
-      font-size: 18px;
-      color: #333;
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 10px;
       text-align: center;
+      color: #222;
     }
 
-    /* ✅ OPTIONAL TABLE STYLE (for future use) */
     table {
       width: 100%;
       border-collapse: collapse;
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+      background-color: white;
     }
 
     th, td {
-      border: 1px solid #ddd;
       padding: 12px;
+      border: 1px solid #ddd;
       text-align: center;
     }
 
@@ -97,62 +129,198 @@
     tr:nth-child(even) {
       background-color: #f9f9f9;
     }
+
+    .back-top {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .back-top a {
+      color: #222;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back-top a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
-
 <body>
 
-<!-- ✅ SIDEBAR -->
-<div class="side-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="past-rankings.html">Past Rankings</a>
-</div>
-
-<!-- ✅ MAIN CONTENT -->
-<div class="main-content">
-
-  <!-- Title -->
-  <h1>🔥 The Heat Index</h1>
-  <h3>Past Rankings</h3>
-
-  <!-- Description -->
-  <div class="content-box">
-    <p>
-      This is where I will put previous weeks rankings to see the fluctuations in change.
-    </p>
+  <div class="side-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="past-rankings.html">Past Rankings</a>
   </div>
 
-  <!-- ✅ FUTURE TABLE (optional placeholder) -->
-  <div class="content-box">
-    <h3>Week 1 (Example)</h3>
+  <div class="main-content" id="top">
+    <h1>Past Rankings</h1>
+    <h3>Top 5 Heat Index rankings from the previous three weeks</h3>
 
-    <table>
-      <tr>
-        <th>Rank</th>
-        <th>Player</th>
-        <th>Score</th>
-        <th>Change</th>
-      </tr>
+    <div class="week-buttons">
+      <a href="#week1">Week Ending 4/5/2026</a>
+      <a href="#week2">Week Ending 3/29/2026</a>
+      <a href="#week3">Week Ending 3/22/2026</a>
+    </div>
 
-      <tr>
-        <td>1</td>
-        <td>Scottie Scheffler</td>
-        <td>10</td>
-        <td>—</td>
-      </tr>
+    <!-- Week 1 -->
+    <div class="week-section" id="week1">
+      <h2 class="week-title">Week Ending 4/5/2026</h2>
+      <div class="week-note">Archived Heat Index rankings for the week ending 4/5/2026</div>
 
-      <tr>
-        <td>2</td>
-        <td>Rory McIlroy</td>
-        <td>9</td>
-        <td>↑1</td>
-      </tr>
+      <h2>PGA Top 5</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Wins</th>
+            <th>Top 10s</th>
+            <th>Majors Won</th>
+            <th>Cuts Missed</th>
+            <th>Heat Index Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Rory McIlroy</td><td>2</td><td>6</td><td>0</td><td>1</td><td>18</td></tr>
+          <tr><td>2</td><td>Collin Morikawa</td><td>1</td><td>6</td><td>0</td><td>1</td><td>14</td></tr>
+          <tr><td>3</td><td>Scottie Scheffler</td><td>1</td><td>5</td><td>0</td><td>1</td><td>12</td></tr>
+          <tr><td>4</td><td>Ludvig Åberg</td><td>1</td><td>3</td><td>0</td><td>1</td><td>8</td></tr>
+          <tr><td>5</td><td>Sepp Straka</td><td>1</td><td>2</td><td>0</td><td>1</td><td>6</td></tr>
+        </tbody>
+      </table>
 
-    </table>
+      <h2>LPGA Top 5</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Wins</th>
+            <th>Top 10s</th>
+            <th>Majors Won</th>
+            <th>Cuts Missed</th>
+            <th>Heat Index Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Nelly Korda</td><td>1</td><td>4</td><td>0</td><td>0</td><td>12</td></tr>
+          <tr><td>2</td><td>Jeeno Thitikul</td><td>1</td><td>3</td><td>0</td><td>0</td><td>10</td></tr>
+          <tr><td>3</td><td>Lydia Ko</td><td>1</td><td>2</td><td>0</td><td>0</td><td>8</td></tr>
+          <tr><td>4</td><td>Ayaka Furue</td><td>1</td><td>1</td><td>0</td><td>0</td><td>6</td></tr>
+          <tr><td>5</td><td>Hae Ran Ryu</td><td>0</td><td>4</td><td>0</td><td>0</td><td>8</td></tr>
+        </tbody>
+      </table>
+
+      <div class="back-top"><a href="#top">Back to top</a></div>
+    </div>
+
+    <!-- Week 2 -->
+    <div class="week-section" id="week2">
+      <h2 class="week-title">Week Ending 3/29/2026</h2>
+      <div class="week-note">Archived Heat Index rankings for the week ending 3/29/2026</div>
+
+      <h2>PGA Top 5</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Wins</th>
+            <th>Top 10s</th>
+            <th>Majors Won</th>
+            <th>Cuts Missed</th>
+            <th>Heat Index Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Rory McIlroy</td><td>2</td><td>5</td><td>0</td><td>1</td><td>16</td></tr>
+          <tr><td>2</td><td>Collin Morikawa</td><td>1</td><td>5</td><td>0</td><td>1</td><td>12</td></tr>
+          <tr><td>3</td><td>Scottie Scheffler</td><td>1</td><td>4</td><td>0</td><td>1</td><td>10</td></tr>
+          <tr><td>4</td><td>Ludvig Åberg</td><td>1</td><td>3</td><td>0</td><td>1</td><td>8</td></tr>
+          <tr><td>5</td><td>Sepp Straka</td><td>1</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
+        </tbody>
+      </table>
+
+      <h2>LPGA Top 5</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Wins</th>
+            <th>Top 10s</th>
+            <th>Majors Won</th>
+            <th>Cuts Missed</th>
+            <th>Heat Index Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Nelly Korda</td><td>1</td><td>3</td><td>0</td><td>0</td><td>10</td></tr>
+          <tr><td>2</td><td>Jeeno Thitikul</td><td>1</td><td>2</td><td>0</td><td>0</td><td>8</td></tr>
+          <tr><td>3</td><td>Lydia Ko</td><td>1</td><td>1</td><td>0</td><td>0</td><td>6</td></tr>
+          <tr><td>4</td><td>Ayaka Furue</td><td>1</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
+          <tr><td>5</td><td>Hae Ran Ryu</td><td>0</td><td>3</td><td>0</td><td>0</td><td>6</td></tr>
+        </tbody>
+      </table>
+
+      <div class="back-top"><a href="#top">Back to top</a></div>
+    </div>
+
+    <!-- Week 3 -->
+    <div class="week-section" id="week3">
+      <h2 class="week-title">Week Ending 3/22/2026</h2>
+      <div class="week-note">Archived Heat Index rankings for the week ending 3/22/2026</div>
+
+      <h2>PGA Top 5</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Wins</th>
+            <th>Top 10s</th>
+            <th>Majors Won</th>
+            <th>Cuts Missed</th>
+            <th>Heat Index Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Rory McIlroy</td><td>1</td><td>5</td><td>0</td><td>1</td><td>12</td></tr>
+          <tr><td>2</td><td>Collin Morikawa</td><td>1</td><td>4</td><td>0</td><td>1</td><td>10</td></tr>
+          <tr><td>3</td><td>Scottie Scheffler</td><td>1</td><td>3</td><td>0</td><td>1</td><td>8</td></tr>
+          <tr><td>4</td><td>Ludvig Åberg</td><td>1</td><td>2</td><td>0</td><td>1</td><td>6</td></tr>
+          <tr><td>5</td><td>Hideki Matsuyama</td><td>1</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
+        </tbody>
+      </table>
+
+      <h2>LPGA Top 5</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Wins</th>
+            <th>Top 10s</th>
+            <th>Majors Won</th>
+            <th>Cuts Missed</th>
+            <th>Heat Index Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Nelly Korda</td><td>1</td><td>2</td><td>0</td><td>0</td><td>8</td></tr>
+          <tr><td>2</td><td>Jeeno Thitikul</td><td>1</td><td>1</td><td>0</td><td>0</td><td>6</td></tr>
+          <tr><td>3</td><td>Lydia Ko</td><td>1</td><td>1</td><td>0</td><td>1</td><td>4</td></tr>
+          <tr><td>4</td><td>Ayaka Furue</td><td>0</td><td>2</td><td>0</td><td>0</td><td>4</td></tr>
+          <tr><td>5</td><td>Hae Ran Ryu</td><td>0</td><td>2</td><td>0</td><td>1</td><td>2</td></tr>
+        </tbody>
+      </table>
+
+      <div class="back-top"><a href="#top">Back to top</a></div>
+    </div>
+
   </div>
-
-</div>
 
 </body>
 </html>
