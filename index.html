@@ -13,7 +13,6 @@
       padding: 20px;
     }
 
-    /* ✅ SIDE NAVIGATION */
     .side-nav {
       position: fixed;
       top: 120px;
@@ -139,90 +138,183 @@
 
 <body>
 
-<!-- ✅ SIDEBAR -->
 <div class="side-nav">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="past-rankings.html">Past Rankings</a>
 </div>
 
-<!-- ✅ MAIN CONTENT START -->
 <div class="main-content">
 
-<div style="display:flex; align-items:center; justify-content:center; gap:20px;">
-  <h1 style="margin:0;">🔥 The Heat Index</h1>
-  <img src="5c9f6f50-6b43-4903-ac60-b2fd87f25cb1.png" width="70" style="border-radius:10px;">
+  <div style="display:flex; align-items:center; justify-content:center; gap:20px;">
+    <h1 style="margin:0;">🔥 The Heat Index</h1>
+    <img src="5c9f6f50-6b43-4903-ac60-b2fd87f25cb1.png" width="70" style="border-radius:10px;">
+  </div>
+
+  <h3>The 5 Hottest Golfers - 2026 Season Ranked by Performance not Reputation!</h3>
+
+  <div class="formula">
+    Use the buttons below to filter the leaderboard by tour.
+  </div>
+
+  <div class="filter-buttons">
+    <button onclick="showSection('all')">Show All</button>
+    <button onclick="showSection('pga')">PGA Only</button>
+    <button onclick="showSection('lpga')">LPGA Only</button>
+  </div>
+
+  <div class="carousel-container">
+    <img id="player-carousel"
+         src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp"
+         alt="Featured golfer">
+  </div>
+
+  <div id="pga-section" class="section">
+    <h2>PGA Top 5</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Player</th>
+          <th>Wins</th>
+          <th>Top 10s</th>
+          <th>Heat Index Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Rory McIlroy</td>
+          <td>3</td>
+          <td>6</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Collin Morikawa</td>
+          <td>1</td>
+          <td>7</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Scottie Scheffler</td>
+          <td>1</td>
+          <td>6</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Ludvig Åberg</td>
+          <td>1</td>
+          <td>4</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Sepp Straka</td>
+          <td>1</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="lpga-section" class="section">
+    <h2>LPGA Top 5</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Player</th>
+          <th>Wins</th>
+          <th>Top 10s</th>
+          <th>Heat Index Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Nelly Korda</td>
+          <td>1</td>
+          <td>4</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jeeno Thitikul</td>
+          <td>1</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Lydia Ko</td>
+          <td>1</td>
+          <td>2</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Ayaka Furue</td>
+          <td>1</td>
+          <td>1</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Hae Ran Ryu</td>
+          <td>0</td>
+          <td>4</td>
+          <td>8</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 </div>
-
-<h3>The 5 Hottest Golfers- 2026 Season Ranked by Performance not Reputation!</h3>
-
-<div class="formula">
-  Use the buttons below to filter the leaderboard by tour.
-</div>
-
-<div class="filter-buttons">
-  <button onclick="showSection('all')">Show All</button>
-  <button onclick="showSection('pga')">PGA Only</button>
-  <button onclick="showSection('lpga')">LPGA Only</button>
-</div>
-
-<div class="carousel-container">
-  <img id="player-carousel" 
-       src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp">
-</div>
-
-<div id="pga-section" class="section">
-  <h2>PGA Top 5</h2>
-  <!-- (Your PGA table stays the same) -->
-</div>
-
-<div id="lpga-section" class="section">
-  <h2>LPGA Top 5</h2>
-  <!-- (Your LPGA table stays the same) -->
-</div>
-
-</div> <!-- ✅ CLOSE MAIN CONTENT -->
 
 <script>
-function showSection(section) {
-  const pga = document.getElementById("pga-section");
-  const lpga = document.getElementById("lpga-section");
+  function showSection(section) {
+    const pga = document.getElementById("pga-section");
+    const lpga = document.getElementById("lpga-section");
 
-  if (section === "all") {
-    pga.style.display = "block";
-    lpga.style.display = "block";
-  } else if (section === "pga") {
-    pga.style.display = "block";
-    lpga.style.display = "none";
-  } else if (section === "lpga") {
-    pga.style.display = "none";
-    lpga.style.display = "block";
-  }
-}
-
-const carouselImages = [
-  "https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp",
-  "https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/korda_nelly_hs24_470x486.jpg"
-];
-
-let currentImageIndex = 0;
-
-function rotateCarousel() {
-  currentImageIndex++;
-  if (currentImageIndex >= carouselImages.length) {
-    currentImageIndex = 0;
+    if (section === "all") {
+      pga.style.display = "block";
+      lpga.style.display = "block";
+    } else if (section === "pga") {
+      pga.style.display = "block";
+      lpga.style.display = "none";
+    } else if (section === "lpga") {
+      pga.style.display = "none";
+      lpga.style.display = "block";
+    }
   }
 
-  document.getElementById("player-carousel").src = carouselImages[currentImageIndex];
-}
+  const carouselImages = [
+    "https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp",
+    "https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/korda_nelly_hs24_470x486.jpg"
+  ];
 
-setInterval(rotateCarousel, 3000);
+  let currentImageIndex = 0;
+
+  function rotateCarousel() {
+    currentImageIndex++;
+    if (currentImageIndex >= carouselImages.length) {
+      currentImageIndex = 0;
+    }
+
+    document.getElementById("player-carousel").src = carouselImages[currentImageIndex];
+  }
+
+  setInterval(rotateCarousel, 3000);
 </script>
 
 <div style="text-align:center; margin-top:40px;">
-  <img 
-    src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/cd60404b-ffcb-44c3-a17d-cfdac3d272c6.png" 
-    width="250" 
+  <img
+    src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/cd60404b-ffcb-44c3-a17d-cfdac3d272c6.png"
+    width="250"
     style="border-radius:10px;">
 </div>
 
