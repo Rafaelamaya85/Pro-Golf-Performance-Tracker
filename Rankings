@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Rankings - The Heat Index</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .side-nav {
+      position: fixed;
+      top: 120px;
+      left: 20px;
+      width: 160px;
+      background-color: #222;
+      padding: 15px 10px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .side-nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 12px 10px;
+      margin-bottom: 10px;
+      background-color: #333;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .side-nav a:hover {
+      background-color: #555;
+    }
+
+    .main-content {
+      margin-left: 210px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Side Navigation -->
+  <div class="side-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="past-rankings.html">Past Rankings</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Past Rankings</h1>
+
+    <p>
+      This is where I will put previous weeks rankings to see the fluctuations in change.
+    </p>
+  </div>
+
+</body>
+</html>
