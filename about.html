@@ -73,6 +73,11 @@
       color: #222;
     }
 
+    h3 {
+      margin-top: 30px;
+      color: #222;
+    }
+
     ul {
       padding-left: 22px;
     }
@@ -82,6 +87,20 @@
     }
 
     .highlight {
+      font-weight: bold;
+    }
+
+    .formula-box {
+      background-color: #f9f9f9;
+      border-left: 5px solid #222;
+      padding: 18px;
+      margin: 25px 0;
+      border-radius: 8px;
+    }
+
+    .formula-box p {
+      margin: 0;
+      font-size: 18px;
       font-weight: bold;
     }
   </style>
@@ -124,27 +143,32 @@
 
       <p>
         The <span class="highlight">Heat Index is different.</span> It focuses strictly on
-        <span class="highlight">current-season performance</span>, using a simple and transparent formula built around:
+        <span class="highlight">current-season performance</span> and uses a simple formula to rank players based
+        on what they have done this season alone.
       </p>
 
+      <div class="formula-box">
+        <p>Heat Index Score = (Wins × 4) + (Top 10s × 2) + (Majors Won × 8) − (Cuts Missed × 2)</p>
+      </div>
+
+      <h3>Metrics Used in the Formula</h3>
       <ul>
-        <li><span class="highlight">Wins</span> (highest weight)</li>
-        <li><span class="highlight">Top 10 finishes</span></li>
-        <li><span class="highlight">Shots gained performance</span> (top 10 in a given week)</li>
-        <li><span class="highlight">Cuts made</span></li>
-        <li><span class="highlight">Cuts missed</span> (negative impact)</li>
+        <li><span class="highlight">Wins × 4</span> — rewards players for winning tournaments</li>
+        <li><span class="highlight">Top 10s × 2</span> — rewards consistency and strong finishes</li>
+        <li><span class="highlight">Majors Won × 8</span> — gives bonus weight to the biggest events in golf</li>
+        <li><span class="highlight">Cuts Missed × -2</span> — penalizes inconsistency and poor finishes</li>
       </ul>
 
       <p>
-        These metrics are combined into a season-long score that highlights who is performing best right now,
-        not who performed best months or years ago.
+        These metrics combine to create a season-long score that highlights who is performing best
+        <span class="highlight">right now</span>, not who built their ranking off results from past seasons.
       </p>
 
       <p>
         This approach mirrors how rankings work in other major sports. In leagues like the NFL or NBA, each season
-        starts fresh. A championship team does not carry over wins or rankings from the previous year. Instead,
-        power rankings reset and are based on current performance, current talent, roster changes, and how teams
-        are expected to perform in the present season.
+        starts fresh. A championship team does not carry over wins or ranking points from the previous year. Instead,
+        power rankings reset and are based on current talent, current performance, and what the team looks like in
+        the present season.
       </p>
 
       <p>
