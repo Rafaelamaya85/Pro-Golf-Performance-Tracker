@@ -6,7 +6,9 @@
   <title>Rory McIlroy - The Heat Index</title>
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       font-family: Arial, sans-serif;
@@ -29,6 +31,7 @@
       border-radius: 12px;
       position: sticky;
       top: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .side-nav a {
@@ -43,9 +46,14 @@
       font-weight: bold;
     }
 
-    .side-nav a:hover { background-color: #555; }
+    .side-nav a:hover {
+      background-color: #555;
+    }
 
-    .main-content { flex: 1; }
+    .main-content {
+      flex: 1;
+      min-width: 0;
+    }
 
     .card {
       background: white;
@@ -64,10 +72,18 @@
 
     .profile-header img {
       width: 220px;
+      max-width: 100%;
       border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
-    h1 { margin: 0 0 10px 0; }
+    h1 {
+      margin: 0 0 10px 0;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
 
     .heat-score {
       background: #222;
@@ -93,8 +109,27 @@
       border-radius: 8px;
     }
 
+    .stat h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .stat p {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+
     table {
       width: 100%;
+      min-width: 600px;
       border-collapse: collapse;
       margin-top: 10px;
     }
@@ -110,10 +145,42 @@
       color: white;
     }
 
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
     @media (max-width: 768px) {
-      .page-wrapper { flex-direction: column; }
-      .side-nav { width: 100%; position: static; }
-      .stats { grid-template-columns: repeat(2, 1fr); }
+      body {
+        padding: 12px;
+      }
+
+      .page-wrapper {
+        flex-direction: column;
+      }
+
+      .side-nav {
+        width: 100%;
+        position: static;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      table {
+        min-width: 540px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      th, td {
+        font-size: 13px;
+        padding: 8px;
+      }
     }
   </style>
 </head>
@@ -122,21 +189,16 @@
 
 <div class="page-wrapper">
 
-  <!-- NAV -->
   <div class="side-nav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="past-rankings.html">Past Rankings</a>
   </div>
 
-  <!-- CONTENT -->
   <div class="main-content">
 
-    <!-- PROFILE -->
     <div class="card">
       <div class="profile-header">
-
-        <!-- ✅ YOUR IMAGE -->
         <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/rory.png" alt="Rory McIlroy">
 
         <div>
@@ -144,28 +206,27 @@
           <p>PGA Tour | Northern Ireland</p>
 
           <p>
-            Rory McIlroy is currently the hottest player in golf following his 2026 Masters victory,
-            marking his second consecutive green jacket and sixth career major championship. :contentReference[oaicite:0]{index=0}
-            His current-season performance reflects elite form and consistency.
+            Rory McIlroy is currently ranked number one in the Heat Index based on his elite 2026 season.
+            His combination of wins, top 10 finishes, and a major championship gives him the highest score
+            on the leaderboard and makes him the hottest player in golf right now.
           </p>
 
-          <div class="heat-score">Heat Index Score: 22</div>
+          <div class="heat-score">Heat Index Score: 30</div>
         </div>
       </div>
     </div>
 
-    <!-- STATS -->
     <div class="card">
-      <h2>2026 Season Stats</h2>
+      <h2>Season Stats</h2>
 
       <div class="stats">
         <div class="stat">
           <h3>Wins</h3>
-          <p>1</p>
+          <p>3</p>
         </div>
         <div class="stat">
           <h3>Top 10s</h3>
-          <p>3</p>
+          <p>6</p>
         </div>
         <div class="stat">
           <h3>Majors Won</h3>
@@ -178,68 +239,82 @@
       </div>
     </div>
 
-    <!-- FORMULA -->
     <div class="card">
       <h2>Heat Index Breakdown</h2>
-
-      <p><strong>Formula:</strong> (Wins × 4) + (Top 10s × 2) + (Majors × 8) − (Cuts Missed × 2)</p>
-
-      <p>
-        (1 × 4) + (3 × 2) + (1 × 8) − (1 × 2)<br>
-        = 4 + 6 + 8 − 2<br>
-        = <strong>16</strong>
-      </p>
+      <p><strong>Formula:</strong> (Wins × 4) + (Top 10s × 2) + (Majors Won × 8) − (Cuts Missed × 2)</p>
 
       <p>
-        <em>Note: Score will increase as additional wins and top 10 finishes are recorded throughout the season.</em>
+        (3 × 4) + (6 × 2) + (1 × 8) − (1 × 2)<br>
+        = 12 + 12 + 8 − 2<br>
+        = <strong>30</strong>
       </p>
     </div>
 
-    <!-- RESULTS -->
     <div class="card">
-      <h2>Recent Results (2026)</h2>
+      <h2>Recent Results</h2>
 
-      <table>
-        <tr>
-          <th>Tournament</th>
-          <th>Finish</th>
-          <th>Result</th>
-        </tr>
-        <tr>
-          <td>Masters Tournament</td>
-          <td>1st</td>
-          <td>Win</td>
-        </tr>
-        <tr>
-          <td>Genesis Invitational</td>
-          <td>2nd</td>
-          <td>Top 10</td>
-        </tr>
-        <tr>
-          <td>Dubai Invitational</td>
-          <td>T3</td>
-          <td>Top 10</td>
-        </tr>
-        <tr>
-          <td>Pebble Beach Pro-Am</td>
-          <td>T14</td>
-          <td>Top 20</td>
-        </tr>
-        <tr>
-          <td>The Players Championship</td>
-          <td>T46</td>
-          <td>—</td>
-        </tr>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <tr>
+            <th>Tournament</th>
+            <th>Finish</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>The Masters</td>
+            <td>1st</td>
+            <td>Major Win</td>
+          </tr>
+          <tr>
+            <td>Players Championship</td>
+            <td>1st</td>
+            <td>Win</td>
+          </tr>
+          <tr>
+            <td>Houston Open</td>
+            <td>1st</td>
+            <td>Win</td>
+          </tr>
+          <tr>
+            <td>Arnold Palmer Invitational</td>
+            <td>T5</td>
+            <td>Top 10</td>
+          </tr>
+          <tr>
+            <td>Genesis Invitational</td>
+            <td>T8</td>
+            <td>Top 10</td>
+          </tr>
+          <tr>
+            <td>Pebble Beach Pro-Am</td>
+            <td>T10</td>
+            <td>Top 10</td>
+          </tr>
+          <tr>
+            <td>Mexico Open</td>
+            <td>T7</td>
+            <td>Top 10</td>
+          </tr>
+          <tr>
+            <td>Bay Hill</td>
+            <td>T9</td>
+            <td>Top 10</td>
+          </tr>
+          <tr>
+            <td>Genesis Scottish Open</td>
+            <td>MC</td>
+            <td>Missed Cut</td>
+          </tr>
+        </table>
+      </div>
     </div>
 
-    <!-- WHY -->
     <div class="card">
       <h2>Why He’s Ranked #1</h2>
       <p>
-        Rory sits at the top of the Heat Index because he has already secured a major championship
-        this season and continues to produce strong finishes. The Heat Index rewards high-impact
-        wins and consistency, making him the clear leader based on current-season performance.
+        Rory is ranked number one because the Heat Index rewards the things that matter most in the current season:
+        winning tournaments, stacking top 10 finishes, and performing in majors. His 2026 results give him the
+        highest total on the board, which is why he sits at the top of the rankings.
       </p>
     </div>
 
