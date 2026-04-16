@@ -27,9 +27,6 @@ The purpose of this project is to create a simpler and more current way to rank 
 - GitHub Pages
 - VS Code
 
-## Milestone Status
-This project is currently shipped as a functional milestone for Project 01. The website is deployed live, includes real content, and allows users to navigate through multiple pages. Future improvements may include more interactivity, expanded ranking history, and additional player details.
-
 ## How to View the Project
 1. Open the live site using the link above
 2. Browse the different pages using the navigation menu
