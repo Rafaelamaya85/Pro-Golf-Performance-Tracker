@@ -16,7 +16,7 @@ The purpose of this project is to create a simpler and more current way to rank 
 - About page explaining the ranking system
 - Past Rankings page to track weekly changes
 - PGA and LPGA player content
-- Real player images and golf-related content
+- Real player images 
 - Navigation between pages
 
 ## Tools Used
