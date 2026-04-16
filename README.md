@@ -20,12 +20,12 @@ The purpose of this project is to create a simpler and more current way to rank 
 - Navigation between pages
 
 ## Tools Used
-- HTML
-- CSS
-- JavaScript
-- GitHub
-- GitHub Pages
-- VS Code
+- HTML – Chosen to build a simple and reliable structure for the website.
+- CSS – Helps create a clean and organized visual design.
+- JavaScript – Chosen to add basic interactivity and improve user experience.
+- GitHub – Chosen for deployment and repository control allowing for easy project management.
+- GitHub Pages – Allows for quick deployment of the site and generates a live URL.
+- VS Code – Chosen becasue it's user friendly and helps build strong interactive code for web development.
 
 ## How to View the Project
 1. Open the live site using the link above
