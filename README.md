@@ -9,7 +9,7 @@ The Heat Index is a golf rankings website that highlights the top 5 hottest play
 [View the GitHub repository here](https://github.com/Rafaelamaya85/Pro-Golf-Performance-Tracker)
 
 ## Project Purpose
-The purpose of this project is to create a simpler and more current way to rank golfers based on their performance this season. As a golf fan, I wanted to build a website that makes rankings easier to understand and more focused on who is actually playing the best right now.
+The purpose of this project is to create a simpler and more current way to rank golfers based on their performance this season. As a golf fan, I wanted to build a website that makes rankings easier to understand and more focused on who is actually playing the best right now. The previous rankings employed by both the PGA/LPGA tours used complex systems based on 2-3 years of results meaning a player could be ranked at the top that has not been playing well for awhile. This site intends to give current season data to make informed decisions on who is playing the best right now. 
 
 ## Features
 - Homepage with current rankings
