@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Past Rankings - The Heat Index</title>
 
   <style>
@@ -11,234 +11,132 @@
       background-color: #f4f4f4;
       margin: 0;
       padding: 20px;
+      color: #222;
     }
 
     .side-nav {
       position: fixed;
       top: 120px;
       left: 20px;
-      width: 160px;
-      background-color: #222;
-      padding: 15px 10px;
+      width: 170px;
+      background-color: #111;
+      padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .side-nav h3 {
+      color: white;
+      margin-top: 0;
+      text-align: center;
     }
 
     .side-nav a {
       display: block;
       color: white;
       text-decoration: none;
-      padding: 12px 10px;
-      margin-bottom: 10px;
-      background-color: #333;
+      margin: 12px 0;
+      padding: 10px;
       border-radius: 8px;
       text-align: center;
-      font-weight: bold;
+      background-color: #222;
     }
 
     .side-nav a:hover {
-      background-color: #555;
+      background-color: #444;
     }
 
     .main-content {
-      margin-left: 210px;
+      margin-left: 240px;
+      max-width: 900px;
+      padding: 20px;
     }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 5px;
-    }
-
-    h3 {
-      text-align: center;
-      font-weight: normal;
-      color: #555;
-      margin-top: 0;
+    .page-header {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       margin-bottom: 25px;
     }
 
-    .content-box {
+    .page-header h1 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    .page-header p {
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .ranking-card {
       background: white;
       padding: 20px;
-      border-left: 5px solid #222;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      max-width: 900px;
-      margin: 0 auto 30px auto;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
     }
 
-    p {
-      font-size: 18px;
-      color: #333;
-      text-align: center;
+    .ranking-card h2 {
+      margin-top: 0;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      margin-top: 15px;
-    }
-
-    th, td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #222;
-      color: white;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    .up {
-      color: green;
-      font-weight: bold;
-    }
-
-    .down {
-      color: red;
-      font-weight: bold;
-    }
-
-    .same {
-      color: gray;
-      font-weight: bold;
+    ul {
+      padding-left: 20px;
+      line-height: 1.8;
     }
 
     @media (max-width: 768px) {
-      .main-content {
-        margin-left: 0;
-        margin-top: 220px;
-      }
-
       .side-nav {
         position: static;
         width: 100%;
         margin-bottom: 20px;
       }
+
+      .main-content {
+        margin-left: 0;
+      }
     }
   </style>
 </head>
-
 <body>
 
   <div class="side-nav">
+    <h3>The Heat Index</h3>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="past-rankings.html">Past Rankings</a>
   </div>
 
   <div class="main-content">
-    <h1>🔥 The Heat Index</h1>
-    <h3>Past Rankings</h3>
-
-    <div class="content-box">
+    <div class="page-header">
+      <h1>Past Rankings</h1>
       <p>
-        This is where I will put previous weeks rankings to see the fluctuations in change.
+        This page tracks previous weekly rankings for both the PGA Tour and LPGA Tour so users can see
+        how player performance changes over time. It is important because it shows movement in the rankings,
+        highlights who is staying hot, and gives more context than just looking at one week's list.
       </p>
     </div>
 
-    <div class="content-box">
-      <h3>Week 1</h3>
-
-      <table>
-        <tr>
-          <th>Rank</th>
-          <th>Player</th>
-          <th>Heat Index Score</th>
-          <th>Change</th>
-        </tr>
-
-        <tr>
-          <td>1</td>
-          <td>Scottie Scheffler</td>
-          <td>10</td>
-          <td class="same">—</td>
-        </tr>
-
-        <tr>
-          <td>2</td>
-          <td>Rory McIlroy</td>
-          <td>9</td>
-          <td class="up">↑ 1</td>
-        </tr>
-
-        <tr>
-          <td>3</td>
-          <td>Chris Gotterup</td>
-          <td>8</td>
-          <td class="down">↓ 1</td>
-        </tr>
-
-        <tr>
-          <td>4</td>
-          <td>Jacob Bridgeman</td>
-          <td>7</td>
-          <td class="same">—</td>
-        </tr>
-
-        <tr>
-          <td>5</td>
-          <td>Jake Knapp</td>
-          <td>6</td>
-          <td class="up">↑ 2</td>
-        </tr>
-      </table>
+    <div class="ranking-card">
+      <h2>Example: Previous Week Rankings</h2>
+      <ul>
+        <li>1. Scottie Scheffler</li>
+        <li>2. Rory McIlroy</li>
+        <li>3. Wyndham Clark</li>
+        <li>4. Xander Schauffele</li>
+        <li>5. Collin Morikawa</li>
+      </ul>
     </div>
 
-    <div class="content-box">
-      <h3>Week 2</h3>
-
-      <table>
-        <tr>
-          <th>Rank</th>
-          <th>Player</th>
-          <th>Heat Index Score</th>
-          <th>Change</th>
-        </tr>
-
-        <tr>
-          <td>1</td>
-          <td>Rory McIlroy</td>
-          <td>36</td>
-          <td class="up">↑ 1</td>
-        </tr>
-
-        <tr>
-          <td>2</td>
-          <td>Chris Gotterup</td>
-          <td>29</td>
-          <td class="up">↑ 1</td>
-        </tr>
-
-        <tr>
-          <td>3</td>
-          <td>Scottie Scheffler</td>
-          <td>26</td>
-          <td class="down">↓ 2</td>
-        </tr>
-
-        <tr>
-          <td>4</td>
-          <td>Jacob Bridgeman</td>
-          <td>25</td>
-          <td class="same">—</td>
-        </tr>
-
-        <tr>
-          <td>5</td>
-          <td>Jake Knapp</td>
-          <td>21</td>
-          <td class="same">—</td>
-        </tr>
-      </table>
+    <div class="ranking-card">
+      <h2>Why This Page Matters</h2>
+      <p>
+        Past rankings help users compare current results with earlier weeks and better understand momentum,
+        consistency, and overall season performance. Instead of only seeing who is ranked highest today,
+        visitors can also follow trends and changes throughout the season.
+      </p>
     </div>
-
   </div>
 
 </body>
