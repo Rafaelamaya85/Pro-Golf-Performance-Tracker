@@ -41,7 +41,7 @@
     }
 
     .container {
-      max-width: 1150px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 24px 18px 40px;
     }
@@ -52,7 +52,7 @@
       border-radius: 18px;
       padding: 32px 24px;
       margin-bottom: 24px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
     }
 
     .hero h1 {
@@ -66,7 +66,7 @@
     }
 
     .formula {
-      background-color: rgba(255,255,255,0.12);
+      background-color: rgba(255, 255, 255, 0.12);
       padding: 12px 14px;
       border-radius: 12px;
       display: inline-block;
@@ -97,87 +97,115 @@
       color: white;
     }
 
-    .featured-card {
-      background: white;
+    .carousel {
+      position: relative;
+      overflow: hidden;
       border-radius: 18px;
-      padding: 24px;
-      display: grid;
-      grid-template-columns: 110px 1fr 120px;
-      gap: 20px;
-      align-items: center;
+      background: white;
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
       margin-bottom: 28px;
     }
 
-    .avatar {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #111, #3a3a3a);
-      color: white;
+    .slides {
       display: flex;
-      align-items: center;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      align-items: stretch;
+    }
+
+    .slide-image {
+      min-height: 360px;
+      background-size: cover;
+      background-position: center top;
+    }
+
+    .slide-content {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-      font-size: 1.8rem;
-      font-weight: bold;
     }
 
-    .featured-rank {
-      font-size: 0.95rem;
-      font-weight: bold;
+    .slide-tour {
       color: #2e7d32;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .featured-name {
-      font-size: 1.8rem;
       font-weight: bold;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       margin-bottom: 8px;
+      font-size: 0.9rem;
     }
 
-    .featured-sub {
+    .slide-content h2 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+    }
+
+    .slide-content p {
+      margin: 0 0 14px;
       color: #555;
-      line-height: 1.5;
-      margin-bottom: 12px;
+      line-height: 1.6;
     }
 
-    .badges,
-    .mini-stats {
+    .slide-stats {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
 
-    .badge,
-    .mini-stat {
-      background-color: #f0f0f0;
-      border-radius: 999px;
+    .slide-stats span {
+      background: #f0f0f0;
       padding: 8px 12px;
-      font-size: 0.9rem;
+      border-radius: 999px;
+      font-size: 0.92rem;
       font-weight: bold;
     }
 
-    .score-box {
-      text-align: center;
-      background-color: #111;
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: rgba(17,17,17,0.75);
       color: white;
-      border-radius: 16px;
-      padding: 18px 10px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      z-index: 5;
     }
 
-    .score-title {
-      font-size: 0.85rem;
-      opacity: 0.85;
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+    .carousel-btn.prev {
+      left: 14px;
     }
 
-    .score-value {
-      font-size: 2rem;
-      font-weight: bold;
+    .carousel-btn.next {
+      right: 14px;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 0 18px;
+      background: white;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #c7c7c7;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: #2e7d32;
     }
 
     .section-block {
@@ -215,14 +243,14 @@
       padding: 18px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.07);
       display: grid;
-      grid-template-columns: 64px 74px 1fr 90px;
+      grid-template-columns: 58px 86px 1fr 90px;
       gap: 16px;
       align-items: center;
     }
 
     .rank-num {
-      width: 54px;
-      height: 54px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       background-color: #111;
       color: white;
@@ -233,17 +261,12 @@
       font-weight: bold;
     }
 
-    .small-avatar {
-      width: 64px;
-      height: 64px;
+    .player-pic {
+      width: 78px;
+      height: 78px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #2e7d32, #111);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 1.1rem;
+      object-fit: cover;
+      border: 3px solid #e7e7e7;
     }
 
     .player-name {
@@ -258,6 +281,41 @@
       line-height: 1.4;
     }
 
+    .mini-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .mini-stat {
+      background-color: #f0f0f0;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .score-box {
+      text-align: center;
+      background-color: #111;
+      color: white;
+      border-radius: 16px;
+      padding: 18px 10px;
+    }
+
+    .score-title {
+      font-size: 0.85rem;
+      opacity: 0.85;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .score-value {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
     .footer-note {
       margin-top: 10px;
       color: #666;
@@ -268,29 +326,29 @@
       display: none;
     }
 
-    @media (max-width: 850px) {
-      .featured-card {
+    @media (max-width: 900px) {
+      .slide {
         grid-template-columns: 1fr;
-        text-align: center;
       }
 
-      .avatar {
-        margin: 0 auto;
+      .slide-image {
+        min-height: 300px;
       }
+    }
 
-      .badges,
-      .mini-stats {
-        justify-content: center;
-      }
-
+    @media (max-width: 850px) {
       .rank-card {
         grid-template-columns: 1fr;
         text-align: center;
       }
 
       .rank-num,
-      .small-avatar {
+      .player-pic {
         margin: 0 auto;
+      }
+
+      .mini-stats {
+        justify-content: center;
       }
     }
 
@@ -301,6 +359,14 @@
 
       .container {
         padding: 18px 14px 30px;
+      }
+
+      .slide-content h2 {
+        font-size: 1.6rem;
+      }
+
+      .slide-image {
+        min-height: 240px;
       }
     }
   </style>
@@ -318,7 +384,7 @@
       <h1>The Heat Index</h1>
       <p>Top 5 hottest golfers of the 2026 season, ranked by current performance, not reputation.</p>
       <p class="formula">Current Formula: Heat Index Score = (Wins × 4) + (Top 10s × 2) + (Majors Won × 8) − (Cuts Missed × 2)</p>
-      <p>Updated after the RBC Heritage.</p>
+      <p>Featured players and leaderboard with real player images.</p>
 
       <div class="filters">
         <button class="filter-btn active" onclick="showSection('all', this)">Show All</button>
@@ -327,46 +393,79 @@
       </div>
     </section>
 
+    <section class="carousel">
+      <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+      <div class="slides" id="slides">
+        <div class="slide">
+          <div class="slide-image" style="background-image: url('rory.png');"></div>
+          <div class="slide-content">
+            <div class="slide-tour">Featured PGA Player</div>
+            <h2>Rory McIlroy</h2>
+            <p>Major-winning form and strong season results keep him in the featured spot.</p>
+            <div class="slide-stats">
+              <span>1 Win</span>
+              <span>2 Top 10s</span>
+              <span>1 Major</span>
+              <span>Heat Index: 16</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-image" style="background-image: url('Scotty_46046.webp');"></div>
+          <div class="slide-content">
+            <div class="slide-tour">Featured PGA Player</div>
+            <h2>Scottie Scheffler</h2>
+            <p>Elite consistency and another strong finish keep him near the top of the Heat Index.</p>
+            <div class="slide-stats">
+              <span>1 Win</span>
+              <span>5 Top 10s</span>
+              <span>0 Majors</span>
+              <span>Heat Index: 14</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-image" style="background-image: url('korda_nelly_hs24_470x486.jpg');"></div>
+          <div class="slide-content">
+            <div class="slide-tour">Featured LPGA Player</div>
+            <h2>Nelly Korda</h2>
+            <p>Winning form and repeated top finishes make her the featured LPGA player.</p>
+            <div class="slide-stats">
+              <span>1 Win</span>
+              <span>4 Top 10s</span>
+              <span>0 Majors</span>
+              <span>Heat Index: 12</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+      <div class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+      </div>
+    </section>
+
     <div id="pga-section" class="section-block">
       <div class="section-header">
         <h2>PGA Top 5</h2>
-        <div class="update-note">Updated to reflect RBC Heritage results</div>
-      </div>
-
-      <div class="featured-card">
-        <div class="avatar">RM</div>
-
-        <div>
-          <div class="featured-rank">Rank #1</div>
-          <div class="featured-name">Rory McIlroy</div>
-          <div class="featured-sub">
-            Still holds the top spot thanks to a major championship boost and strong early-season form.
-          </div>
-          <div class="badges">
-            <span class="badge">1 Win</span>
-            <span class="badge">2 Top 10s</span>
-            <span class="badge">1 Major</span>
-            <span class="badge">Heat Index: 16</span>
-          </div>
-        </div>
-
-        <div class="score-box">
-          <div class="score-title">Score</div>
-          <div class="score-value">16</div>
-        </div>
+        <div class="update-note">Current PGA leaderboard view</div>
       </div>
 
       <div class="rank-grid">
         <div class="rank-card">
-          <div class="rank-num">2</div>
-          <div class="small-avatar">MF</div>
+          <div class="rank-num">1</div>
+          <img src="rory.png" alt="Rory McIlroy" class="player-pic">
           <div>
-            <div class="player-name">Matt Fitzpatrick</div>
-            <div class="player-sub">Moves up after winning the RBC Heritage and picking up his second PGA TOUR win of the season.</div>
+            <div class="player-name">Rory McIlroy</div>
+            <div class="player-sub">Major-winning season and strong form keep him in the top spot.</div>
             <div class="mini-stats">
-              <span class="mini-stat">2 Wins</span>
-              <span class="mini-stat">4 Top 10s</span>
-              <span class="mini-stat">0 Majors</span>
+              <span class="mini-stat">1 Win</span>
+              <span class="mini-stat">2 Top 10s</span>
+              <span class="mini-stat">1 Major</span>
               <span class="mini-stat">Heat Index: 16</span>
             </div>
           </div>
@@ -377,11 +476,11 @@
         </div>
 
         <div class="rank-card">
-          <div class="rank-num">3</div>
-          <div class="small-avatar">SS</div>
+          <div class="rank-num">2</div>
+          <img src="Scotty_46046.webp" alt="Scottie Scheffler" class="player-pic">
           <div>
             <div class="player-name">Scottie Scheffler</div>
-            <div class="player-sub">Runner-up at the RBC Heritage and still one of the most consistent players on TOUR.</div>
+            <div class="player-sub">Still one of the most consistent players on tour with big-time week-to-week form.</div>
             <div class="mini-stats">
               <span class="mini-stat">1 Win</span>
               <span class="mini-stat">5 Top 10s</span>
@@ -396,11 +495,11 @@
         </div>
 
         <div class="rank-card">
-          <div class="rank-num">4</div>
-          <div class="small-avatar">CM</div>
+          <div class="rank-num">3</div>
+          <img src="collin.jpg" alt="Collin Morikawa" class="player-pic">
           <div>
             <div class="player-name">Collin Morikawa</div>
-            <div class="player-sub">Remains in the top group with a win and a steady stream of strong finishes.</div>
+            <div class="player-sub">Steady top-end performances all season keep him in the top group.</div>
             <div class="mini-stats">
               <span class="mini-stat">1 Win</span>
               <span class="mini-stat">4 Top 10s</span>
@@ -415,14 +514,33 @@
         </div>
 
         <div class="rank-card">
-          <div class="rank-num">5</div>
-          <div class="small-avatar">LÅ</div>
+          <div class="rank-num">4</div>
+          <img src="Ludvig.jpg" alt="Ludvig Aberg" class="player-pic">
           <div>
             <div class="player-name">Ludvig Åberg</div>
-            <div class="player-sub">Still hanging around the top five with consistent high finishes this season.</div>
+            <div class="player-sub">Strong finishes and a good season push keep him in the conversation.</div>
             <div class="mini-stats">
               <span class="mini-stat">0 Wins</span>
               <span class="mini-stat">4 Top 10s</span>
+              <span class="mini-stat">0 Majors</span>
+              <span class="mini-stat">Heat Index: 8</span>
+            </div>
+          </div>
+          <div class="score-box">
+            <div class="score-title">Score</div>
+            <div class="score-value">8</div>
+          </div>
+        </div>
+
+        <div class="rank-card">
+          <div class="rank-num">5</div>
+          <img src="sepp.jpg" alt="Sepp Straka" class="player-pic">
+          <div>
+            <div class="player-name">Sepp Straka</div>
+            <div class="player-sub">A solid season keeps him in the top five mix.</div>
+            <div class="mini-stats">
+              <span class="mini-stat">1 Win</span>
+              <span class="mini-stat">3 Top 10s</span>
               <span class="mini-stat">0 Majors</span>
               <span class="mini-stat">Heat Index: 8</span>
             </div>
@@ -438,36 +556,32 @@
     <div id="lpga-section" class="section-block">
       <div class="section-header">
         <h2>LPGA Top 5</h2>
-        <div class="update-note">Current season leaderboard snapshot</div>
-      </div>
-
-      <div class="featured-card">
-        <div class="avatar">NK</div>
-
-        <div>
-          <div class="featured-rank">Rank #1</div>
-          <div class="featured-name">Nelly Korda</div>
-          <div class="featured-sub">
-            Leads the LPGA Heat Index with winning form and repeated top finishes.
-          </div>
-          <div class="badges">
-            <span class="badge">1 Win</span>
-            <span class="badge">4 Top 10s</span>
-            <span class="badge">0 Majors</span>
-            <span class="badge">Heat Index: 12</span>
-          </div>
-        </div>
-
-        <div class="score-box">
-          <div class="score-title">Score</div>
-          <div class="score-value">12</div>
-        </div>
+        <div class="update-note">Current LPGA leaderboard view</div>
       </div>
 
       <div class="rank-grid">
         <div class="rank-card">
+          <div class="rank-num">1</div>
+          <img src="korda_nelly_hs24_470x486.jpg" alt="Nelly Korda" class="player-pic">
+          <div>
+            <div class="player-name">Nelly Korda</div>
+            <div class="player-sub">Leads the LPGA Heat Index with winning form and repeated top finishes.</div>
+            <div class="mini-stats">
+              <span class="mini-stat">1 Win</span>
+              <span class="mini-stat">4 Top 10s</span>
+              <span class="mini-stat">0 Majors</span>
+              <span class="mini-stat">Heat Index: 12</span>
+            </div>
+          </div>
+          <div class="score-box">
+            <div class="score-title">Score</div>
+            <div class="score-value">12</div>
+          </div>
+        </div>
+
+        <div class="rank-card">
           <div class="rank-num">2</div>
-          <div class="small-avatar">JT</div>
+          <img src="jeeno.jpg" alt="Jeeno Thitikul" class="player-pic">
           <div>
             <div class="player-name">Jeeno Thitikul</div>
             <div class="player-sub">Close behind with balanced form and consistency.</div>
@@ -486,7 +600,7 @@
 
         <div class="rank-card">
           <div class="rank-num">3</div>
-          <div class="small-avatar">LK</div>
+          <img src="lydia.jpg" alt="Lydia Ko" class="player-pic">
           <div>
             <div class="player-name">Lydia Ko</div>
             <div class="player-sub">A win plus steady high finishes keep her in the mix.</div>
@@ -505,10 +619,10 @@
 
         <div class="rank-card">
           <div class="rank-num">4</div>
-          <div class="small-avatar">AF</div>
+          <img src="ayaka.jpg" alt="Ayaka Furue" class="player-pic">
           <div>
             <div class="player-name">Ayaka Furue</div>
-            <div class="player-sub">Strong season start keeps her inside the top group.</div>
+            <div class="player-sub">Strong season form keeps her inside the top group.</div>
             <div class="mini-stats">
               <span class="mini-stat">1 Win</span>
               <span class="mini-stat">1 Top 10</span>
@@ -524,7 +638,7 @@
 
         <div class="rank-card">
           <div class="rank-num">5</div>
-          <div class="small-avatar">HR</div>
+          <img src="ryu.jpg" alt="Hae Ran Ryu" class="player-pic">
           <div>
             <div class="player-name">Hae Ran Ryu</div>
             <div class="player-sub">Consistency keeps her on the board despite no win yet.</div>
@@ -543,7 +657,7 @@
       </div>
 
       <div class="footer-note">
-        Note: LPGA rankings were left as-is here and the PGA side was updated to reflect the RBC Heritage.
+        This restored version brings back real player pictures and a homepage image carousel.
       </div>
     </div>
   </div>
@@ -568,6 +682,33 @@
         pga.classList.add("hidden");
       }
     }
+
+    let currentSlide = 0;
+    const slides = document.getElementById("slides");
+    const dots = document.querySelectorAll(".dot");
+    const totalSlides = dots.length;
+
+    function updateCarousel() {
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[currentSlide].classList.add("active");
+    }
+
+    function moveSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = totalSlides - 1;
+      if (currentSlide >= totalSlides) currentSlide = 0;
+      updateCarousel();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateCarousel();
+    }
+
+    setInterval(() => {
+      moveSlide(1);
+    }, 4500);
   </script>
 
 </body>
