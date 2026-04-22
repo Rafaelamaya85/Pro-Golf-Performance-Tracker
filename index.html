@@ -311,49 +311,80 @@
     }
 
     .upcoming-stamp {
-      margin-top: 16px;
+      margin-top: 18px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+      border: 1px solid #e5e7eb;
       background: white;
-      border-left: 6px solid #111827;
-      border-radius: 12px;
-      padding: 14px 16px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     }
 
-    .upcoming-stamp strong {
-      display: block;
-      font-size: 13px;
+    .upcoming-header {
+      background: #111827;
+      color: white;
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .upcoming-body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+    }
+
+    .upcoming-text {
+      min-width: 0;
+    }
+
+    .upcoming-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #6b7280;
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      color: #6b7280;
       margin-bottom: 6px;
     }
 
-    .upcoming-stamp .event-name {
-      font-size: 1rem;
+    .upcoming-event {
+      font-size: 1.05rem;
       font-weight: 800;
       color: #111827;
+      margin-bottom: 4px;
     }
 
-    .upcoming-stamp .event-sub {
-      margin-top: 4px;
+    .upcoming-sub {
       font-size: 14px;
-      color: #374151;
+      color: #4b5563;
+    }
+
+    .upcoming-badge {
+      flex-shrink: 0;
+      background: #f3f4f6;
+      color: #111827;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
     .upcoming-stamp.major {
-      border-left-color: #d97706;
-      background: #fff7ed;
+      border-color: #f59e0b;
+      background: linear-gradient(180deg, #fffaf0 0%, #ffffff 100%);
     }
 
-    .upcoming-stamp .major-tag {
-      display: inline-block;
-      margin-top: 8px;
+    .upcoming-stamp.major .upcoming-header {
+      background: linear-gradient(135deg, #b45309, #d97706);
+    }
+
+    .upcoming-stamp.major .upcoming-badge {
       background: #d97706;
       color: white;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 700;
     }
 
     @media (max-width: 900px) {
@@ -403,6 +434,15 @@
 
       .mini-stats {
         justify-content: center;
+      }
+
+      .upcoming-body {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .upcoming-badge {
+        white-space: normal;
       }
     }
   </style>
@@ -546,8 +586,15 @@
       </div>
 
       <div class="upcoming-stamp">
-        <strong>Upcoming Tournament</strong>
-        <div class="event-name">Zurich Classic of New Orleans</div>
+        <div class="upcoming-header">Up Next</div>
+        <div class="upcoming-body">
+          <div class="upcoming-text">
+            <div class="upcoming-label">PGA Tour</div>
+            <div class="upcoming-event">Zurich Classic of New Orleans</div>
+            <div class="upcoming-sub">Team event • Next tournament on the schedule</div>
+          </div>
+          <div class="upcoming-badge">Upcoming</div>
+        </div>
       </div>
     </div>
 
@@ -658,9 +705,15 @@
       </div>
 
       <div class="upcoming-stamp major">
-        <strong>Upcoming Tournament</strong>
-        <div class="event-name">The Chevron Championship</div>
-        <div class="major-tag">Major Championship</div>
+        <div class="upcoming-header">Up Next</div>
+        <div class="upcoming-body">
+          <div class="upcoming-text">
+            <div class="upcoming-label">LPGA Tour</div>
+            <div class="upcoming-event">The Chevron Championship</div>
+            <div class="upcoming-sub">First major championship of the LPGA season</div>
+          </div>
+          <div class="upcoming-badge">Major Championship</div>
+        </div>
       </div>
     </div>
 
