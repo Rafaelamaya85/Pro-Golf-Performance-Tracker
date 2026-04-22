@@ -6,9 +6,7 @@
   <title>The Heat Index</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       font-family: Arial, sans-serif;
@@ -44,14 +42,7 @@
       font-weight: bold;
     }
 
-    .side-nav a:hover {
-      background-color: #374151;
-    }
-
-    .main-content {
-      flex: 1;
-      min-width: 0;
-    }
+    .main-content { flex: 1; }
 
     .hero {
       background: linear-gradient(135deg, #111827, #1f2937);
@@ -59,36 +50,25 @@
       border-radius: 18px;
       padding: 24px;
       margin-bottom: 22px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.16);
     }
 
-    .hero h1 {
-      margin: 0;
-      text-align: center;
-      font-size: 2.2rem;
-    }
-
-    .hero p {
-      text-align: center;
-      margin: 10px 0 0;
-      color: #d1d5db;
-    }
+    .hero h1 { margin: 0; text-align: center; }
+    .hero p { text-align: center; color: #d1d5db; }
 
     .formula {
       background: white;
-      padding: 16px 18px;
+      padding: 16px;
       margin-bottom: 20px;
       border-left: 6px solid #111827;
       border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     }
 
     .filter-buttons {
       display: flex;
       justify-content: center;
       gap: 10px;
-      flex-wrap: wrap;
       margin-bottom: 24px;
+      flex-wrap: wrap;
     }
 
     .filter-buttons button {
@@ -99,11 +79,6 @@
       border-radius: 999px;
       cursor: pointer;
       font-weight: bold;
-      font-size: 14px;
-    }
-
-    .filter-buttons button:hover {
-      background-color: #1f2937;
     }
 
     .carousel-container {
@@ -117,30 +92,11 @@
       height: 300px;
       object-fit: cover;
       border-radius: 18px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-      background: white;
     }
 
-    .section-block {
-      margin-bottom: 36px;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 18px;
-    }
-
-    .section-header h2 {
-      margin: 0;
-      font-size: 1.9rem;
-      color: #111827;
-    }
-
-    .update-note {
-      color: #6b7280;
-      font-size: 14px;
-      margin-top: 6px;
-    }
+    .section-block { margin-bottom: 36px; }
+    .section-header { text-align: center; margin-bottom: 18px; }
+    .update-note { color: #6b7280; font-size: 14px; }
 
     .featured-card {
       background: linear-gradient(135deg, #111827, #1f2937);
@@ -151,23 +107,20 @@
       grid-template-columns: 100px 1fr auto;
       gap: 20px;
       align-items: center;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.16);
       margin-bottom: 18px;
     }
 
     .featured-rank {
       font-size: 58px;
       font-weight: 800;
-      line-height: 1;
-      text-align: center;
       color: #fbbf24;
+      text-align: center;
     }
 
     .featured-info {
       display: flex;
       align-items: center;
       gap: 16px;
-      min-width: 0;
     }
 
     .featured-info img {
@@ -175,75 +128,33 @@
       height: 92px;
       object-fit: cover;
       border-radius: 14px;
-      border: 3px solid rgba(255,255,255,0.15);
-      flex-shrink: 0;
     }
 
-    .featured-text h3 {
-      margin: 0 0 6px 0;
-      font-size: 1.5rem;
-    }
-
-    .featured-text p {
-      margin: 0 0 10px 0;
-      color: #d1d5db;
-      font-size: 14px;
-    }
-
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; }
 
     .badge {
       background: rgba(255,255,255,0.1);
-      color: white;
-      padding: 7px 10px;
+      padding: 6px 10px;
       border-radius: 999px;
       font-size: 12px;
       font-weight: bold;
     }
 
-    .featured-score {
-      text-align: center;
-      min-width: 100px;
-    }
-
-    .featured-score .score-label {
-      font-size: 12px;
-      color: #d1d5db;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-    }
-
     .featured-score .score-number {
       font-size: 42px;
       font-weight: 800;
-      margin-top: 4px;
     }
 
-    .rank-list {
-      display: grid;
-      gap: 14px;
-    }
+    .rank-list { display: grid; gap: 14px; }
 
     .rank-card {
       background: white;
       border-radius: 16px;
-      padding: 16px 18px;
+      padding: 16px;
       display: grid;
       grid-template-columns: 52px 72px 1fr auto;
       gap: 16px;
       align-items: center;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    }
-
-    .rank-num {
-      font-size: 28px;
-      font-weight: 800;
-      color: #111827;
-      text-align: center;
     }
 
     .rank-card img {
@@ -251,113 +162,26 @@
       height: 72px;
       object-fit: cover;
       border-radius: 12px;
-      background: #e5e7eb;
-    }
-
-    .player-main {
-      min-width: 0;
-    }
-
-    .player-name {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #111827;
-      text-decoration: none;
-    }
-
-    .player-name:hover {
-      color: #2563eb;
-    }
-
-    .player-sub {
-      margin-top: 4px;
-      font-size: 13px;
-      color: #6b7280;
     }
 
     .mini-stats {
       display: flex;
-      flex-wrap: wrap;
       gap: 8px;
-      margin-top: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
     }
 
     .mini-stat {
       background: #f3f4f6;
-      border-radius: 999px;
       padding: 6px 10px;
+      border-radius: 999px;
       font-size: 12px;
       font-weight: bold;
-      color: #374151;
     }
 
-    .score-box {
-      text-align: center;
-      min-width: 74px;
-    }
-
-    .score-box .score-title {
-      font-size: 11px;
-      color: #6b7280;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-    }
-
-    .score-box .score-value {
+    .score-value {
       font-size: 28px;
       font-weight: 800;
-      color: #111827;
-      margin-top: 4px;
-    }
-
-    @media (max-width: 900px) {
-      .featured-card {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .featured-info {
-        flex-direction: column;
-      }
-
-      .featured-score {
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 768px) {
-      body {
-        padding: 12px;
-      }
-
-      .page-wrapper {
-        flex-direction: column;
-      }
-
-      .side-nav {
-        width: 100%;
-      }
-
-      .filter-buttons {
-        flex-direction: column;
-      }
-
-      .filter-buttons button {
-        width: 100%;
-      }
-
-      .carousel-container img {
-        height: 240px;
-      }
-
-      .rank-card {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .mini-stats {
-        justify-content: center;
-      }
     }
   </style>
 </head>
@@ -366,248 +190,169 @@
 
 <div class="page-wrapper">
 
-  <div class="side-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="past-rankings.html">Past Rankings</a>
+<div class="side-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="past-rankings.html">Past Rankings</a>
+</div>
+
+<div class="main-content">
+
+<div class="hero">
+  <h1>🔥 The Heat Index</h1>
+  <p>Top 5 hottest golfers of the 2026 season</p>
+</div>
+
+<div class="formula">
+  Heat Index = (Wins × 4) + (Top 10s × 2) + (Majors × 8) − (Missed Cuts × 2)
+</div>
+
+<div class="filter-buttons">
+  <button onclick="showSection('all')">Show All</button>
+  <button onclick="showSection('pga')">PGA Only</button>
+  <button onclick="showSection('lpga')">LPGA Only</button>
+</div>
+
+<div class="carousel-container">
+  <img id="carousel" src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/rory.png">
+</div>
+
+<!-- PGA UPDATED -->
+<div id="pga-section" class="section-block">
+  <div class="section-header">
+    <h2>PGA Top 5</h2>
+    <div class="update-note">Updated after RBC Heritage</div>
   </div>
 
-  <div class="main-content">
-
-    <div class="hero">
-      <h1>🔥 The Heat Index</h1>
-      <p>Top 5 hottest golfers of the 2026 season, ranked by current performance not reputation.</p>
-    </div>
-
-    <div class="formula">
-      <strong>Current Formula:</strong> Heat Index Score = (Wins × 4) + (Top 10s × 2) + (Majors Won × 8) − (Cuts Missed × 2)
-    </div>
-
-    <div class="filter-buttons">
-      <button onclick="showSection('all')">Show All</button>
-      <button onclick="showSection('pga')">PGA Only</button>
-      <button onclick="showSection('lpga')">LPGA Only</button>
-    </div>
-
-    <div class="carousel-container">
-      <img id="carousel" src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/rory.png" alt="Featured golfer">
-    </div>
-
-    <!-- PGA -->
-    <div id="pga-section" class="section-block">
-      <div class="section-header">
-        <h2>PGA Top 5</h2>
-        <div class="update-note">Updated after RBC Heritage (4/19/2026)</div>
-      </div>
-
-      <div class="featured-card">
-        <div class="featured-rank">1</div>
-        <div class="featured-info">
-          <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/rory.png" alt="Rory McIlroy">
-          <div class="featured-text">
-            <h3><a href="rory.html" style="color:white; text-decoration:none;">Rory McIlroy</a></h3>
-            <p>Still holds the top spot thanks to multiple wins, strong consistency, and a major bonus.</p>
-            <div class="badges">
-              <span class="badge">3 Wins</span>
-              <span class="badge">6 Top 10s</span>
-              <span class="badge">1 Major</span>
-              <span class="badge">1 Missed Cut</span>
-            </div>
-          </div>
-        </div>
-        <div class="featured-score">
-          <div class="score-label">Heat Index</div>
-          <div class="score-number">30</div>
-        </div>
-      </div>
-
-      <div class="rank-list">
-        <div class="rank-card">
-          <div class="rank-num">2</div>
-          <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/collin.jpg" alt="Collin Morikawa">
-          <div class="player-main">
-            <div class="player-name">Collin Morikawa</div>
-            <div class="player-sub">RBC Heritage top finish boosts him up the board</div>
-            <div class="mini-stats">
-              <span class="mini-stat">1 Win</span>
-              <span class="mini-stat">8 Top 10s</span>
-              <span class="mini-stat">0 Majors</span>
-              <span class="mini-stat">1 MC</span>
-            </div>
-          </div>
-          <div class="score-box">
-            <div class="score-title">Score</div>
-            <div class="score-value">18</div>
-          </div>
-        </div>
-
-        <div class="rank-card">
-          <div class="rank-num">3</div>
-          <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp" alt="Scottie Scheffler">
-          <div class="player-main">
-            <div class="player-name">Scottie Scheffler</div>
-            <div class="player-sub">Runner-up at Harbour Town keeps him firmly in the top tier</div>
-            <div class="mini-stats">
-              <span class="mini-stat">1 Win</span>
-              <span class="mini-stat">7 Top 10s</span>
-              <span class="mini-stat">0 Majors</span>
-              <span class="mini-stat">1 MC</span>
-            </div>
-          </div>
-          <div class="score-box">
-            <div class="score-title">Score</div>
-            <div class="score-value">16</div>
-          </div>
-        </div>
-
-        <div class="rank-card">
-          <div class="rank-num">4</div>
-          <img src="https://via.placeholder.com/72x72.png?text=MF" alt="Matt Fitzpatrick">
-          <div class="player-main">
-            <div class="player-name">Matt Fitzpatrick</div>
-            <div class="player-sub">RBC Heritage win puts him into the updated top five</div>
-            <div class="mini-stats">
-              <span class="mini-stat">2 Wins</span>
-              <span class="mini-stat">3 Top 10s</span>
-              <span class="mini-stat">0 Majors</span>
-              <span class="mini-stat">1 MC</span>
-            </div>
-          </div>
-          <div class="score-box">
-            <div class="score-title">Score</div>
-            <div class="score-value">12</div>
-          </div>
-        </div>
-
-        <div class="rank-card">
-          <div class="rank-num">5</div>
-          <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Ludvig.jpg" alt="Ludvig Åberg">
-          <div class="player-main">
-            <div class="player-name">Ludvig Åberg</div>
-            <div class="player-sub">Strong early season keeps him inside the top five</div>
-            <div class="mini-stats">
-              <span class="mini-stat">1 Win</span>
-              <span class="mini-stat">4 Top 10s</span>
-              <span class="mini-stat">0 Majors</span>
-              <span class="mini-stat">1 MC</span>
-            </div>
-          </div>
-          <div class="score-box">
-            <div class="score-title">Score</div>
-            <div class="score-value">10</div>
-          </div>
+  <div class="featured-card">
+    <div class="featured-rank">1</div>
+    <div class="featured-info">
+      <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/rory.png">
+      <div>
+        <h3>Rory McIlroy</h3>
+        <div class="badges">
+          <span class="badge">3 Wins</span>
+          <span class="badge">6 Top 10s</span>
+          <span class="badge">1 Major</span>
+          <span class="badge">1 MC</span>
         </div>
       </div>
     </div>
-
-    <!-- LPGA -->
-    <div id="lpga-section" class="section-block">
-      <div class="section-header">
-        <h2>LPGA Top 5</h2>
-        <div class="update-note">Updated after JM Eagle LA Championship (4/19/2026)</div>
-      </div>
-
-      <div class="featured-card">
-        <div class="featured-rank">1</div>
-        <div class="featured-info">
-          <img src="https://via.placeholder.com/92x92.png?text=HG" alt="Hannah Green">
-          <div class="featured-text">
-            <h3>Hannah Green</h3>
-            <p>Fresh off the JM Eagle LA Championship win, she moves to the top of the LPGA Heat Index.</p>
-            <div class="badges">
-              <span class="badge">2 Wins</span>
-              <span class="badge">3 Top 10s</span>
-              <span class="badge">0 Majors</span>
-              <span class="badge">1 Missed Cut</span>
-            </div>
-          </div>
-        </div>
-        <div class="featured-score">
-          <div class="score-label">Heat Index</div>
-          <div class="score-number">12</div>
-        </div>
-      </div>
-
-      <div class="rank-list">
-        <div class="rank-card">
-          <div class="rank-num">2</div>
-          <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/korda_nelly_hs24_470x486.jpg" alt="Nelly Korda">
-          <div class="player-main">
-            <div class="player-name">Nelly Korda</div>
-            <div class="player-sub">Elite consistency keeps her right near the top</div>
-            <div class="mini-stats">
-              <span class="mini-stat">1 Win</span>
-              <span class="mini-stat">4 Top 10s</span>
-              <span class="mini-stat">0 Majors</span>
-              <span class="mini-stat">0 MC</span>
-            </div>
-          </div>
-          <div class="score-box">
-            <div class="score-title">Score</div>
-            <div class="score-value">12</div>
-          </div>
-        </div>
-
-        <div class="rank-card">
-          <div class="rank-num">3</div>
-          <img src="https://via.placeholder.com/72x72.png?text=HK" alt="Hyo Joo Kim">
-          <div class="player-main">
-            <div class="player-name">Hyo Joo Kim</div>
-            <div class="player-sub">Multiple wins this season keep her in the top tier</div>
-            <div class="mini-stats">
-              <span class="mini-stat">2 Wins</span>
-              <span class="mini-stat">3 Top 10s</span>
-              <span class="mini-stat">0 Majors</span>
-              <span class="mini-stat">1 MC</span>
-            </div>
-          </div>
-          <div class="score-box">
-            <div class="score-title">Score</div>
-            <div class="score-value">12</div>
-          </div>
-        </div>
-
-        <div class="rank-card">
-          <div class="rank-num">4</div>
-          <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/jeeno.jpg" alt="Jeeno Thitikul">
-          <div class="player-main">
-            <div class="player-name">Jeeno Thitikul</div>
-            <div class="player-sub">Balanced form and steady finishes keep her in contention</div>
-            <div class="mini-stats">
-              <span class="mini-stat">1 Win</span>
-              <span class="mini-stat">2 Top 10s</span>
-              <span class="mini-stat">0 Majors</span>
-              <span class="mini-stat">0 MC</span>
-            </div>
-          </div>
-          <div class="score-box">
-            <div class="score-title">Score</div>
-            <div class="score-value">8</div>
-          </div>
-        </div>
-
-        <div class="rank-card">
-          <div class="rank-num">5</div>
-          <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/ryu.jpg" alt="Hae Ran Ryu">
-          <div class="player-main">
-            <div class="player-name">Hae Ran Ryu</div>
-            <div class="player-sub">Consistency keeps her in the top five with no win yet</div>
-            <div class="mini-stats">
-              <span class="mini-stat">0 Wins</span>
-              <span class="mini-stat">5 Top 10s</span>
-              <span class="mini-stat">0 Majors</span>
-              <span class="mini-stat">1 MC</span>
-            </div>
-          </div>
-          <div class="score-box">
-            <div class="score-title">Score</div>
-            <div class="score-value">8</div>
-          </div>
-        </div>
-      </div>
+    <div class="featured-score">
+      <div class="score-number">30</div>
     </div>
-
   </div>
+
+  <div class="rank-list">
+    <div class="rank-card">
+      <div>2</div>
+      <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/collin.jpg">
+      <div>
+        <strong>Collin Morikawa</strong>
+        <div class="mini-stats">
+          <span class="mini-stat">1 Win</span>
+          <span class="mini-stat">8 Top 10s</span>
+        </div>
+      </div>
+      <div class="score-value">18</div>
+    </div>
+
+    <div class="rank-card">
+      <div>3</div>
+      <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp">
+      <div>
+        <strong>Scottie Scheffler</strong>
+        <div class="mini-stats">
+          <span class="mini-stat">1 Win</span>
+          <span class="mini-stat">7 Top 10s</span>
+        </div>
+      </div>
+      <div class="score-value">16</div>
+    </div>
+
+    <div class="rank-card">
+      <div>4</div>
+      <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/fitzpatrick.jpg">
+      <div>
+        <strong>Matt Fitzpatrick</strong>
+        <div class="mini-stats">
+          <span class="mini-stat">2 Wins</span>
+          <span class="mini-stat">3 Top 10s</span>
+        </div>
+      </div>
+      <div class="score-value">12</div>
+    </div>
+
+    <div class="rank-card">
+      <div>5</div>
+      <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Ludvig.jpg">
+      <div>
+        <strong>Ludvig Åberg</strong>
+        <div class="mini-stats">
+          <span class="mini-stat">1 Win</span>
+          <span class="mini-stat">4 Top 10s</span>
+        </div>
+      </div>
+      <div class="score-value">10</div>
+    </div>
+  </div>
+</div>
+
+<!-- LPGA UPDATED -->
+<div id="lpga-section" class="section-block">
+  <div class="section-header">
+    <h2>LPGA Top 5</h2>
+  </div>
+
+  <div class="featured-card">
+    <div class="featured-rank">1</div>
+    <div class="featured-info">
+      <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/green.jpg">
+      <div>
+        <h3>Hannah Green</h3>
+        <div class="badges">
+          <span class="badge">2 Wins</span>
+          <span class="badge">3 Top 10s</span>
+        </div>
+      </div>
+    </div>
+    <div class="featured-score">
+      <div class="score-number">12</div>
+    </div>
+  </div>
+
+  <div class="rank-list">
+    <div class="rank-card">
+      <div>2</div>
+      <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/korda_nelly_hs24_470x486.jpg">
+      <div><strong>Nelly Korda</strong></div>
+      <div class="score-value">12</div>
+    </div>
+
+    <div class="rank-card">
+      <div>3</div>
+      <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/kim.jpg">
+      <div><strong>Hyo Joo Kim</strong></div>
+      <div class="score-value">12</div>
+    </div>
+
+    <div class="rank-card">
+      <div>4</div>
+      <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/jeeno.jpg">
+      <div><strong>Jeeno Thitikul</strong></div>
+      <div class="score-value">8</div>
+    </div>
+
+    <div class="rank-card">
+      <div>5</div>
+      <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/ryu.jpg">
+      <div><strong>Hae Ran Ryu</strong></div>
+      <div class="score-value">8</div>
+    </div>
+  </div>
+</div>
+
+</div>
 </div>
 
 <script>
