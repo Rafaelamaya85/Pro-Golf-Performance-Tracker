@@ -310,6 +310,52 @@
       margin-top: 4px;
     }
 
+    .upcoming-stamp {
+      margin-top: 16px;
+      background: white;
+      border-left: 6px solid #111827;
+      border-radius: 12px;
+      padding: 14px 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .upcoming-stamp strong {
+      display: block;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+
+    .upcoming-stamp .event-name {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    .upcoming-stamp .event-sub {
+      margin-top: 4px;
+      font-size: 14px;
+      color: #374151;
+    }
+
+    .upcoming-stamp.major {
+      border-left-color: #d97706;
+      background: #fff7ed;
+    }
+
+    .upcoming-stamp .major-tag {
+      display: inline-block;
+      margin-top: 8px;
+      background: #d97706;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
     @media (max-width: 900px) {
       .featured-card {
         grid-template-columns: 1fr;
@@ -461,23 +507,23 @@
         </div>
 
         <div class="rank-card">
-  <div class="rank-num">4</div>
-  <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Fitzpatrick.jpg" alt="Matt Fitzpatrick">
-  <div class="player-main">
-    <div class="player-name">Matt Fitzpatrick</div>
-    <div class="player-sub">RBC Heritage win puts him into the updated top five</div>
-    <div class="mini-stats">
-      <span class="mini-stat">2 Wins</span>
-      <span class="mini-stat">3 Top 10s</span>
-      <span class="mini-stat">0 Majors</span>
-      <span class="mini-stat">1 MC</span>
-    </div>
-  </div>
-  <div class="score-box">
-    <div class="score-title">Score</div>
-    <div class="score-value">12</div>
-  </div>
-</div>
+          <div class="rank-num">4</div>
+          <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Fitzpatrick.jpg" alt="Matt Fitzpatrick">
+          <div class="player-main">
+            <div class="player-name">Matt Fitzpatrick</div>
+            <div class="player-sub">RBC Heritage win puts him into the updated top five</div>
+            <div class="mini-stats">
+              <span class="mini-stat">2 Wins</span>
+              <span class="mini-stat">3 Top 10s</span>
+              <span class="mini-stat">0 Majors</span>
+              <span class="mini-stat">1 MC</span>
+            </div>
+          </div>
+          <div class="score-box">
+            <div class="score-title">Score</div>
+            <div class="score-value">12</div>
+          </div>
+        </div>
 
         <div class="rank-card">
           <div class="rank-num">5</div>
@@ -497,6 +543,11 @@
             <div class="score-value">10</div>
           </div>
         </div>
+      </div>
+
+      <div class="upcoming-stamp">
+        <strong>Upcoming Tournament</strong>
+        <div class="event-name">Zurich Classic of New Orleans</div>
       </div>
     </div>
 
@@ -604,6 +655,12 @@
             <div class="score-value">8</div>
           </div>
         </div>
+      </div>
+
+      <div class="upcoming-stamp major">
+        <strong>Upcoming Tournament</strong>
+        <div class="event-name">The Chevron Championship</div>
+        <div class="major-tag">Major Championship</div>
       </div>
     </div>
 
