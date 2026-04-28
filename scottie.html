@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scottie Scheffler - The Heat Index</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+    }
+
+    .page-wrapper {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .side-nav {
+      width: 180px;
+      background-color: #222;
+      padding: 15px 10px;
+      border-radius: 12px;
+      position: sticky;
+      top: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .side-nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      margin-bottom: 10px;
+      background-color: #333;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .side-nav a:hover { background-color: #555; }
+
+    .main-content { flex: 1; min-width: 0; }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .profile-header {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .profile-header img {
+      width: 220px;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    h1 { margin: 0 0 10px 0; }
+
+    .heat-score {
+      background: #222;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .stat {
+      background: #f9f9f9;
+      padding: 15px;
+      border-left: 5px solid #222;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .stat h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .stat p {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      min-width: 600px;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background: #222;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 12px; }
+
+      .page-wrapper { flex-direction: column; }
+
+      .side-nav {
+        width: 100%;
+        position: static;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      table {
+        min-width: 540px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      th, td {
+        font-size: 13px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+  <div class="side-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="past-rankings.html">Past Rankings</a>
+  </div>
+
+  <div class="main-content">
+
+    <div class="card">
+      <div class="profile-header">
+        <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp" alt="Scottie Scheffler">
+
+        <div>
+          <h1>Scottie Scheffler</h1>
+          <p>PGA Tour | United States</p>
+          <p><strong>Age:</strong> 29</p>
+          <p><strong>Turned Pro:</strong> June 2018</p>
+
+          <p>
+            Scottie Scheffler remains one of the most consistent players in the world.
+            His steady top finishes keep him firmly inside the PGA Heat Index top five,
+            even when another player has the hotter win total for the current season.
+          </p>
+
+          <div class="heat-score">Heat Index Score: 16</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Season Stats</h2>
+
+      <div class="stats">
+        <div class="stat">
+          <h3>Wins</h3>
+          <p>1</p>
+        </div>
+        <div class="stat">
+          <h3>Top 10s</h3>
+          <p>7</p>
+        </div>
+        <div class="stat">
+          <h3>Majors Won</h3>
+          <p>0</p>
+        </div>
+        <div class="stat">
+          <h3>Cuts Missed</h3>
+          <p>1</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Heat Index Breakdown</h2>
+
+      <p><strong>Formula:</strong> (Wins × 4) + (Top 10s × 2) + (Majors Won × 8) − (Cuts Missed × 2)</p>
+
+      <p>
+        (1 × 4) + (7 × 2) + (0 × 8) − (1 × 2)<br>
+        = 4 + 14 + 0 − 2<br>
+        = <strong>16</strong>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Recent Results</h2>
+
+      <div class="table-wrapper">
+        <table>
+          <tr>
+            <th>Tournament</th>
+            <th>Finish</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>THE PLAYERS Championship</td>
+            <td>Top 10</td>
+            <td>Top 10 Finish</td>
+          </tr>
+          <tr>
+            <td>RBC Heritage</td>
+            <td>Top 10</td>
+            <td>Top 10 Finish</td>
+          </tr>
+          <tr>
+            <td>Arnold Palmer Invitational</td>
+            <td>Top 10</td>
+            <td>Top 10 Finish</td>
+          </tr>
+          <tr>
+            <td>Texas Children's Houston Open</td>
+            <td>Top 10</td>
+            <td>Top 10 Finish</td>
+          </tr>
+          <tr>
+            <td>The Genesis Invitational</td>
+            <td>MC</td>
+            <td>Missed Cut</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Why He’s Ranked #4</h2>
+      <p>
+        Scheffler is ranked fourth because the Heat Index rewards current-season production.
+        His consistency and top 10 finishes keep him near the top, but the formula gives extra
+        weight to wins and majors, which is why he currently sits behind players with stronger
+        win totals.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
