@@ -32,4 +32,4 @@ The purpose of this project is to create a simpler and more current way to rank 
 ## Reflection
 
 You can view my project reflection here:  
-👉 [View REFLECTION.md](REFLECTION.md)
+ [View REFLECTION.md](REFLECTION.md)
