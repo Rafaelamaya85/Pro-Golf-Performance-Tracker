@@ -1,6 +1,6 @@
 Reflection
 
-# REFLECTION.md (Shortened)
+# REFLECTION.md 
 
 Building *The Heat Index* was alot of fun and incredibly rewarding because it connects to something I genuinely care about. As a golf obsessed fan, I wanted to create a simple way to identify the best golfers right now. Golf in general is a complex sport that can be overwhelming. The rankings are often difficult to understand because they rely on complex systems that include results from the past two to three years. Unlike other sports that focus on current performance, golf can make it hard to see who is actually in form and not benefitting from a hot streak from a few years ago. This project was my attempt to simplify that.
 
