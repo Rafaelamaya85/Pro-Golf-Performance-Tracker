@@ -40,11 +40,15 @@
       padding: 24px 18px 40px;
     }
 
-    .page-header {
+    .page-header,
+    .ranking-card {
       background: white;
-      padding: 28px;
       border-radius: 16px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .page-header {
+      padding: 28px;
       margin-bottom: 24px;
     }
 
@@ -64,16 +68,24 @@
     }
 
     .ranking-card {
-      background: white;
       padding: 22px;
-      border-radius: 16px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
       margin-bottom: 20px;
+    }
+
+    .current-week {
+      border: 2px solid #fbbf24;
+      background: linear-gradient(180deg, #fffaf0 0%, #ffffff 100%);
     }
 
     .ranking-card h2 {
       margin-top: 0;
       color: #2e7d32;
+    }
+
+    .week-subtitle {
+      margin-top: -6px;
+      color: #666;
+      font-size: 14px;
     }
 
     .columns {
@@ -83,14 +95,65 @@
       margin-top: 14px;
     }
 
-    h3 {
-      margin-bottom: 10px;
+    .tour-column {
+      background: #fafafa;
+      border-radius: 14px;
+      padding: 16px;
+      border: 1px solid #e5e7eb;
     }
 
-    ul {
-      padding-left: 20px;
-      line-height: 1.8;
+    .tour-column h3 {
       margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .ranking-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .ranking-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      border-radius: 12px;
+      padding: 10px 12px;
+      border: 1px solid #e5e7eb;
+      flex-wrap: wrap;
+    }
+
+    .rank-badge {
+      background: #111827;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .player-name {
+      font-weight: bold;
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .score-pill {
+      background: #f3f4f6;
+      color: #111827;
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 12px;
+      font-weight: bold;
+      white-space: nowrap;
     }
 
     .up {
@@ -128,26 +191,22 @@
     }
 
     @keyframes fallFade {
-      from {
-        opacity: 1;
-      }
-      to {
-        opacity: 0.65;
-      }
+      from { opacity: 1; }
+      to { opacity: 0.65; }
     }
 
     @keyframes pulseNew {
-      from {
-        text-shadow: 0 0 2px rgba(0, 123, 255, 0.3);
-      }
-      to {
-        text-shadow: 0 0 10px rgba(0, 123, 255, 0.75);
-      }
+      from { text-shadow: 0 0 2px rgba(0, 123, 255, 0.3); }
+      to { text-shadow: 0 0 10px rgba(0, 123, 255, 0.75); }
     }
 
     @media (max-width: 700px) {
       .columns {
         grid-template-columns: 1fr;
+      }
+
+      .player-name {
+        min-width: 120px;
       }
     }
   </style>
@@ -178,28 +237,30 @@
     </p>
   </div>
 
-  <div class="ranking-card">
-    <h2>Week of May 4, 2026 (Post Cadillac / Riviera Maya)</h2>
+  <div class="ranking-card current-week">
+    <h2>Week of May 4, 2026</h2>
+    <p class="week-subtitle">Post Cadillac Championship / Riviera Maya Open</p>
+
     <div class="columns">
-      <div>
+      <div class="tour-column">
         <h3>PGA Tour</h3>
-        <ul>
-          <li>1. Matt Fitzpatrick <span class="up">↑3</span></li>
-          <li>2. Cameron Young <span class="new">NEW</span></li>
-          <li>3. Rory McIlroy <span class="down">↓2</span></li>
-          <li>4. Scottie Scheffler <span class="down">↓1</span></li>
-          <li>5. Collin Morikawa <span class="down">↓3</span></li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Matt Fitzpatrick</span><span class="score-pill">22 pts</span><span class="up">↑3</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Cameron Young</span><span class="score-pill">16 pts</span><span class="new">NEW</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Rory McIlroy</span><span class="score-pill">16 pts</span><span class="down">↓2</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Scottie Scheffler</span><span class="score-pill">16 pts</span><span class="down">↓1</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Collin Morikawa</span><span class="score-pill">10 pts</span><span class="down">↓3</span></li>
         </ul>
       </div>
 
-      <div>
+      <div class="tour-column">
         <h3>LPGA Tour</h3>
-        <ul>
-          <li>1. Nelly Korda <span class="up">↑1</span></li>
-          <li>2. Hannah Green <span class="down">↓1</span></li>
-          <li>3. Hyo Joo Kim <span class="same">—</span></li>
-          <li>4. Hae Ran Ryu <span class="up">↑1</span></li>
-          <li>5. Jeeno Thitikul <span class="down">↓1</span></li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Nelly Korda</span><span class="score-pill">32 pts</span><span class="up">↑1</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Hannah Green</span><span class="score-pill">14 pts</span><span class="down">↓1</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Hyo Joo Kim</span><span class="score-pill">14 pts</span><span class="same">—</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Hae Ran Ryu</span><span class="score-pill">8 pts</span><span class="up">↑1</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Jeeno Thitikul</span><span class="score-pill">6 pts</span><span class="down">↓1</span></li>
         </ul>
       </div>
     </div>
@@ -207,26 +268,27 @@
 
   <div class="ranking-card">
     <h2>Week of April 27, 2026</h2>
+
     <div class="columns">
-      <div>
+      <div class="tour-column">
         <h3>PGA Tour</h3>
-        <ul>
-          <li>1. Rory McIlroy</li>
-          <li>2. Collin Morikawa</li>
-          <li>3. Scottie Scheffler</li>
-          <li>4. Matt Fitzpatrick</li>
-          <li>5. Ludvig Åberg</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Rory McIlroy</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Collin Morikawa</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Scottie Scheffler</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Matt Fitzpatrick</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Ludvig Åberg</span></li>
         </ul>
       </div>
 
-      <div>
+      <div class="tour-column">
         <h3>LPGA Tour</h3>
-        <ul>
-          <li>1. Hannah Green</li>
-          <li>2. Nelly Korda</li>
-          <li>3. Hyo Joo Kim</li>
-          <li>4. Jeeno Thitikul</li>
-          <li>5. Hae Ran Ryu</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Hannah Green</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Nelly Korda</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Hyo Joo Kim</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Jeeno Thitikul</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Hae Ran Ryu</span></li>
         </ul>
       </div>
     </div>
@@ -234,26 +296,27 @@
 
   <div class="ranking-card">
     <h2>Week of April 20, 2026</h2>
+
     <div class="columns">
-      <div>
+      <div class="tour-column">
         <h3>PGA Tour</h3>
-        <ul>
-          <li>1. Rory McIlroy</li>
-          <li>2. Matt Fitzpatrick</li>
-          <li>3. Scottie Scheffler</li>
-          <li>4. Collin Morikawa</li>
-          <li>5. Ludvig Åberg</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Rory McIlroy</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Matt Fitzpatrick</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Scottie Scheffler</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Collin Morikawa</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Ludvig Åberg</span></li>
         </ul>
       </div>
 
-      <div>
+      <div class="tour-column">
         <h3>LPGA Tour</h3>
-        <ul>
-          <li>1. Nelly Korda</li>
-          <li>2. Jeeno Thitikul</li>
-          <li>3. Lydia Ko</li>
-          <li>4. Ayaka Furue</li>
-          <li>5. Hae Ran Ryu</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Nelly Korda</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Jeeno Thitikul</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Lydia Ko</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Ayaka Furue</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Hae Ran Ryu</span></li>
         </ul>
       </div>
     </div>
@@ -261,26 +324,27 @@
 
   <div class="ranking-card">
     <h2>Week of March 31, 2026</h2>
+
     <div class="columns">
-      <div>
+      <div class="tour-column">
         <h3>PGA Tour</h3>
-        <ul>
-          <li>1. Scottie Scheffler</li>
-          <li>2. Collin Morikawa</li>
-          <li>3. Rory McIlroy</li>
-          <li>4. Wyndham Clark</li>
-          <li>5. Xander Schauffele</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Scottie Scheffler</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Collin Morikawa</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Rory McIlroy</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Wyndham Clark</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Xander Schauffele</span></li>
         </ul>
       </div>
 
-      <div>
+      <div class="tour-column">
         <h3>LPGA Tour</h3>
-        <ul>
-          <li>1. Nelly Korda</li>
-          <li>2. Hae Ran Ryu</li>
-          <li>3. Lydia Ko</li>
-          <li>4. Jin Young Ko</li>
-          <li>5. Lilia Vu</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Nelly Korda</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Hae Ran Ryu</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Lydia Ko</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Jin Young Ko</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Lilia Vu</span></li>
         </ul>
       </div>
     </div>
@@ -288,26 +352,27 @@
 
   <div class="ranking-card">
     <h2>Week of March 24, 2026</h2>
+
     <div class="columns">
-      <div>
+      <div class="tour-column">
         <h3>PGA Tour</h3>
-        <ul>
-          <li>1. Scottie Scheffler</li>
-          <li>2. Rory McIlroy</li>
-          <li>3. Collin Morikawa</li>
-          <li>4. Wyndham Clark</li>
-          <li>5. Xander Schauffele</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Scottie Scheffler</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Rory McIlroy</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Collin Morikawa</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Wyndham Clark</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Xander Schauffele</span></li>
         </ul>
       </div>
 
-      <div>
+      <div class="tour-column">
         <h3>LPGA Tour</h3>
-        <ul>
-          <li>1. Nelly Korda</li>
-          <li>2. Lydia Ko</li>
-          <li>3. Jin Young Ko</li>
-          <li>4. Lilia Vu</li>
-          <li>5. Hae Ran Ryu</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Nelly Korda</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Lydia Ko</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Jin Young Ko</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Lilia Vu</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Hae Ran Ryu</span></li>
         </ul>
       </div>
     </div>
@@ -315,26 +380,27 @@
 
   <div class="ranking-card">
     <h2>Week of March 17, 2026</h2>
+
     <div class="columns">
-      <div>
+      <div class="tour-column">
         <h3>PGA Tour</h3>
-        <ul>
-          <li>1. Scottie Scheffler</li>
-          <li>2. Rory McIlroy</li>
-          <li>3. Collin Morikawa</li>
-          <li>4. Xander Schauffele</li>
-          <li>5. Wyndham Clark</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Scottie Scheffler</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Rory McIlroy</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Collin Morikawa</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Xander Schauffele</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Wyndham Clark</span></li>
         </ul>
       </div>
 
-      <div>
+      <div class="tour-column">
         <h3>LPGA Tour</h3>
-        <ul>
-          <li>1. Nelly Korda</li>
-          <li>2. Lydia Ko</li>
-          <li>3. Jin Young Ko</li>
-          <li>4. Lilia Vu</li>
-          <li>5. Hae Ran Ryu</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Nelly Korda</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Lydia Ko</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Jin Young Ko</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Lilia Vu</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Hae Ran Ryu</span></li>
         </ul>
       </div>
     </div>
@@ -342,26 +408,27 @@
 
   <div class="ranking-card">
     <h2>Week of March 10, 2026</h2>
+
     <div class="columns">
-      <div>
+      <div class="tour-column">
         <h3>PGA Tour</h3>
-        <ul>
-          <li>1. Scottie Scheffler</li>
-          <li>2. Xander Schauffele</li>
-          <li>3. Rory McIlroy</li>
-          <li>4. Collin Morikawa</li>
-          <li>5. Wyndham Clark</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Scottie Scheffler</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Xander Schauffele</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Rory McIlroy</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Collin Morikawa</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Wyndham Clark</span></li>
         </ul>
       </div>
 
-      <div>
+      <div class="tour-column">
         <h3>LPGA Tour</h3>
-        <ul>
-          <li>1. Nelly Korda</li>
-          <li>2. Jin Young Ko</li>
-          <li>3. Lydia Ko</li>
-          <li>4. Lilia Vu</li>
-          <li>5. Hae Ran Ryu</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Nelly Korda</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Jin Young Ko</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Lydia Ko</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Lilia Vu</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Hae Ran Ryu</span></li>
         </ul>
       </div>
     </div>
@@ -369,26 +436,27 @@
 
   <div class="ranking-card">
     <h2>Week of March 3, 2026</h2>
+
     <div class="columns">
-      <div>
+      <div class="tour-column">
         <h3>PGA Tour</h3>
-        <ul>
-          <li>1. Scottie Scheffler</li>
-          <li>2. Xander Schauffele</li>
-          <li>3. Collin Morikawa</li>
-          <li>4. Rory McIlroy</li>
-          <li>5. Viktor Hovland</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Scottie Scheffler</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Xander Schauffele</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Collin Morikawa</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Rory McIlroy</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Viktor Hovland</span></li>
         </ul>
       </div>
 
-      <div>
+      <div class="tour-column">
         <h3>LPGA Tour</h3>
-        <ul>
-          <li>1. Nelly Korda</li>
-          <li>2. Lydia Ko</li>
-          <li>3. Jin Young Ko</li>
-          <li>4. Lilia Vu</li>
-          <li>5. Hae Ran Ryu</li>
+        <ul class="ranking-list">
+          <li><span class="rank-badge">1</span><span class="player-name">Nelly Korda</span></li>
+          <li><span class="rank-badge">2</span><span class="player-name">Lydia Ko</span></li>
+          <li><span class="rank-badge">3</span><span class="player-name">Jin Young Ko</span></li>
+          <li><span class="rank-badge">4</span><span class="player-name">Lilia Vu</span></li>
+          <li><span class="rank-badge">5</span><span class="player-name">Hae Ran Ryu</span></li>
         </ul>
       </div>
     </div>
