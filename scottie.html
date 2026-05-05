@@ -29,7 +29,6 @@
       border-radius: 12px;
       position: sticky;
       top: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .side-nav a {
@@ -138,32 +137,15 @@
 
     @media (max-width: 768px) {
       body { padding: 12px; }
-
       .page-wrapper { flex-direction: column; }
-
-      .side-nav {
-        width: 100%;
-        position: static;
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      table {
-        min-width: 540px;
-      }
+      .side-nav { width: 100%; position: static; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      table { min-width: 540px; }
     }
 
     @media (max-width: 480px) {
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      th, td {
-        font-size: 13px;
-        padding: 8px;
-      }
+      .stats { grid-template-columns: 1fr; }
+      th, td { font-size: 13px; padding: 8px; }
     }
   </style>
 </head>
@@ -180,6 +162,7 @@
 
   <div class="main-content">
 
+    <!-- PROFILE -->
     <div class="card">
       <div class="profile-header">
         <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp" alt="Scottie Scheffler">
@@ -187,21 +170,21 @@
         <div>
           <h1>Scottie Scheffler</h1>
           <p>PGA Tour | United States</p>
-          <p><strong>Age:</strong> 29</p>
-          <p><strong>Turned Pro:</strong> June 2018</p>
-          <p><strong>Current Heat Index Rank:</strong> #3</p>
+          <p><strong>Born:</strong> Ridgewood, New Jersey</p>
+          <p><strong>Turned Pro:</strong> 2018</p>
+          <p><strong>Current Heat Index Rank:</strong> #4</p>
 
           <p>
-            Scottie Scheffler is currently ranked number three in the PGA Heat Index.
-            His one win and five top 10 finishes show why he remains one of the most consistent
-            players on the PGA Tour this season.
+            Scottie Scheffler continues to be one of the most consistent players on tour this season.
+            His high number of top 10 finishes keeps him near the top of the Heat Index leaderboard.
           </p>
 
-          <div class="heat-score">Heat Index Score: 14</div>
+          <div class="heat-score">Heat Index Score: 16</div>
         </div>
       </div>
     </div>
 
+    <!-- STATS -->
     <div class="card">
       <h2>Season Stats</h2>
 
@@ -212,7 +195,7 @@
         </div>
         <div class="stat">
           <h3>Top 10s</h3>
-          <p>5</p>
+          <p>6</p>
         </div>
         <div class="stat">
           <h3>Majors Won</h3>
@@ -225,18 +208,20 @@
       </div>
     </div>
 
+    <!-- FORMULA -->
     <div class="card">
       <h2>Heat Index Breakdown</h2>
 
       <p><strong>Formula:</strong> (Wins × 4) + (Top 10s × 2) + (Majors Won × 8) − (Cuts Missed × 2)</p>
 
       <p>
-        (1 × 4) + (5 × 2) + (0 × 8) − (0 × 2)<br>
-        = 4 + 10 + 0 − 0<br>
-        = <strong>14</strong>
+        (1 × 4) + (6 × 2) + (0 × 8) − (0 × 2)<br>
+        = 4 + 12 + 0 − 0<br>
+        = <strong>16</strong>
       </p>
     </div>
 
+    <!-- RESULTS -->
     <div class="card">
       <h2>Recent Results</h2>
 
@@ -248,45 +233,36 @@
             <th>Result</th>
           </tr>
           <tr>
-            <td>Recent PGA Event</td>
-            <td>1st</td>
-            <td>Win</td>
+            <td>Cadillac Championship</td>
+            <td>2nd</td>
+            <td>Top 10</td>
           </tr>
           <tr>
-            <td>Recent PGA Event</td>
+            <td>THE PLAYERS Championship</td>
             <td>Top 10</td>
-            <td>Top 10 Finish</td>
+            <td>Top 10</td>
           </tr>
           <tr>
-            <td>Recent PGA Event</td>
+            <td>Arnold Palmer Invitational</td>
             <td>Top 10</td>
-            <td>Top 10 Finish</td>
+            <td>Top 10</td>
           </tr>
           <tr>
-            <td>Recent PGA Event</td>
+            <td>Genesis Invitational</td>
             <td>Top 10</td>
-            <td>Top 10 Finish</td>
-          </tr>
-          <tr>
-            <td>Recent PGA Event</td>
             <td>Top 10</td>
-            <td>Top 10 Finish</td>
-          </tr>
-          <tr>
-            <td>Recent PGA Event</td>
-            <td>Top 10</td>
-            <td>Top 10 Finish</td>
           </tr>
         </table>
       </div>
     </div>
 
+    <!-- WHY -->
     <div class="card">
-      <h2>Why He’s Ranked #3</h2>
+      <h2>Why He’s Ranked #4</h2>
       <p>
-        Scottie is ranked number three because the Heat Index rewards both wins and consistent top 10 finishes.
-        He is tied with Collin Morikawa in score, but he is listed ahead on the homepage because of overall
-        consistency and current-season form.
+        Scheffler is ranked number four because while he has the highest number of top 10 finishes among the top players,
+        the Heat Index places more weight on wins. His single win and six top 10 finishes give him a total score of 16,
+        tying him with Rory McIlroy and Cameron Young, but placing him slightly behind due to fewer wins.
       </p>
     </div>
 
