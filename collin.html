@@ -29,7 +29,6 @@
       border-radius: 12px;
       position: sticky;
       top: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .side-nav a {
@@ -138,32 +137,15 @@
 
     @media (max-width: 768px) {
       body { padding: 12px; }
-
       .page-wrapper { flex-direction: column; }
-
-      .side-nav {
-        width: 100%;
-        position: static;
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      table {
-        min-width: 540px;
-      }
+      .side-nav { width: 100%; position: static; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      table { min-width: 540px; }
     }
 
     @media (max-width: 480px) {
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      th, td {
-        font-size: 13px;
-        padding: 8px;
-      }
+      .stats { grid-template-columns: 1fr; }
+      th, td { font-size: 13px; padding: 8px; }
     }
   </style>
 </head>
@@ -187,14 +169,13 @@
         <div>
           <h1>Collin Morikawa</h1>
           <p>PGA Tour | United States</p>
-          <p><strong>Age:</strong> 29</p>
-          <p><strong>Turned Pro:</strong> June 2019</p>
-          <p><strong>Current Heat Index Rank:</strong> #4</p>
+          <p><strong>Born:</strong> Los Angeles, California</p>
+          <p><strong>Turned Pro:</strong> 2019</p>
+          <p><strong>Current Heat Index Rank:</strong> #5</p>
 
           <p>
-            Collin Morikawa is currently ranked number four in the PGA Heat Index.
-            His steady top 10 finishes keep him inside the top five, even without a win
-            currently counted on the homepage.
+            Collin Morikawa remains inside the PGA Heat Index top five because of his consistent top 10 finishes.
+            Even without a win currently counted on the homepage, his steady play keeps him in the rankings.
           </p>
 
           <div class="heat-score">Heat Index Score: 10</div>
@@ -277,11 +258,11 @@
     </div>
 
     <div class="card">
-      <h2>Why He’s Ranked #4</h2>
+      <h2>Why He’s Ranked #5</h2>
       <p>
-        Morikawa is ranked number four because the Heat Index rewards consistent current-season performance.
-        His five top 10 finishes give him a strong score, but players with wins or a major championship
-        are ranked above him using the formula.
+        Morikawa is ranked number five because the Heat Index rewards consistent current-season performance.
+        His five top 10 finishes give him 10 points, which keeps him inside the top five.
+        Players ranked above him have either more wins, a major championship bonus, or stronger recent momentum.
       </p>
     </div>
 
