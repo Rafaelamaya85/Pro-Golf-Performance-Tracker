@@ -45,7 +45,7 @@
 
     .side-nav a:hover { background-color: #555; }
 
-    .main-content { flex: 1; }
+    .main-content { flex: 1; min-width: 0; }
 
     .card {
       background: white;
@@ -64,8 +64,12 @@
 
     .profile-header img {
       width: 220px;
+      max-width: 100%;
       border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
+
+    h1 { margin: 0 0 10px 0; }
 
     .heat-score {
       background: #222;
@@ -91,9 +95,29 @@
       border-radius: 8px;
     }
 
+    .stat h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .stat p {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+
     table {
       width: 100%;
+      min-width: 600px;
       border-collapse: collapse;
+      margin-top: 10px;
     }
 
     th, td {
@@ -105,6 +129,23 @@
     th {
       background: #222;
       color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 12px; }
+      .page-wrapper { flex-direction: column; }
+      .side-nav { width: 100%; position: static; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      table { min-width: 540px; }
+    }
+
+    @media (max-width: 480px) {
+      .stats { grid-template-columns: 1fr; }
+      th, td { font-size: 13px; padding: 8px; }
     }
   </style>
 </head>
@@ -124,22 +165,22 @@
     <!-- PROFILE -->
     <div class="card">
       <div class="profile-header">
-   <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Cameron.png" alt="Cameron Young">
+        <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/cameron.png" alt="Cameron Young">
 
         <div>
           <h1>Cameron Young</h1>
           <p>PGA Tour | United States</p>
           <p><strong>Born:</strong> Scarborough, New York</p>
           <p><strong>Turned Pro:</strong> 2019</p>
+          <p><strong>Current Heat Index Rank:</strong> #2</p>
 
           <p>
-            Cameron Young has emerged as one of the top players in the 2026 season.
-            His victory at THE PLAYERS Championship highlights his ability to win
-            on the biggest stages, while his consistent finishes keep him firmly
-            inside the Heat Index top five.
+            Cameron Young has surged into the number two spot in the PGA Heat Index after winning the Cadillac Championship.
+            His ability to win big events combined with consistent top 10 finishes has made him one of the hottest players
+            on tour this season.
           </p>
 
-          <div class="heat-score">Heat Index Score: 10</div>
+          <div class="heat-score">Heat Index Score: 16</div>
         </div>
       </div>
     </div>
@@ -151,11 +192,11 @@
       <div class="stats">
         <div class="stat">
           <h3>Wins</h3>
-          <p>1</p>
+          <p>2</p>
         </div>
         <div class="stat">
           <h3>Top 10s</h3>
-          <p>3</p>
+          <p>4</p>
         </div>
         <div class="stat">
           <h3>Majors Won</h3>
@@ -172,12 +213,12 @@
     <div class="card">
       <h2>Heat Index Breakdown</h2>
 
-      <p><strong>Formula:</strong> (Wins × 4) + (Top 10s × 2) + (Majors × 8) − (Cuts Missed × 2)</p>
+      <p><strong>Formula:</strong> (Wins × 4) + (Top 10s × 2) + (Majors Won × 8) − (Cuts Missed × 2)</p>
 
       <p>
-        (1 × 4) + (3 × 2) + (0 × 8) − (0 × 2)<br>
-        = 4 + 6 + 0 − 0<br>
-        = <strong>10</strong>
+        (2 × 4) + (4 × 2) + (0 × 8) − (0 × 2)<br>
+        = 8 + 8 + 0 − 0<br>
+        = <strong>16</strong>
       </p>
     </div>
 
@@ -185,42 +226,45 @@
     <div class="card">
       <h2>Recent Results</h2>
 
-      <table>
-        <tr>
-          <th>Tournament</th>
-          <th>Finish</th>
-          <th>Result</th>
-        </tr>
-        <tr>
-          <td>THE PLAYERS Championship</td>
-          <td>1st</td>
-          <td>Win</td>
-        </tr>
-        <tr>
-          <td>Masters Tournament</td>
-          <td>Top 10</td>
-          <td>Top 10</td>
-        </tr>
-        <tr>
-          <td>Genesis Invitational</td>
-          <td>Top 10</td>
-          <td>Top 10</td>
-        </tr>
-        <tr>
-          <td>AT&T Pebble Beach Pro-Am</td>
-          <td>Top 10</td>
-          <td>Top 10</td>
-        </tr>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <tr>
+            <th>Tournament</th>
+            <th>Finish</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>Cadillac Championship</td>
+            <td>1st</td>
+            <td>Win</td>
+          </tr>
+          <tr>
+            <td>THE PLAYERS Championship</td>
+            <td>1st</td>
+            <td>Win</td>
+          </tr>
+          <tr>
+            <td>Masters Tournament</td>
+            <td>Top 10</td>
+            <td>Top 10</td>
+          </tr>
+          <tr>
+            <td>Genesis Invitational</td>
+            <td>Top 10</td>
+            <td>Top 10</td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <!-- WHY -->
     <div class="card">
-      <h2>Why He’s Ranked #5</h2>
+      <h2>Why He’s Ranked #2</h2>
       <p>
-        Young’s ranking is driven by his PLAYERS Championship win and consistent
-        finishes throughout the season. While he has fewer top 10s than players
-        above him, the win keeps him firmly in the top five using the Heat Index formula.
+        Young is ranked number two because the Heat Index strongly rewards wins. His two wins give him
+        8 points, and his four top 10 finishes add another 8 points, bringing his total to 16.
+        He is tied in score with Rory McIlroy and Scottie Scheffler, but his recent Cadillac Championship
+        win gives him the strongest current momentum among those players.
       </p>
     </div>
 
