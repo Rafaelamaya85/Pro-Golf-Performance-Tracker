@@ -29,7 +29,6 @@
       border-radius: 12px;
       position: sticky;
       top: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .side-nav a {
@@ -138,32 +137,15 @@
 
     @media (max-width: 768px) {
       body { padding: 12px; }
-
       .page-wrapper { flex-direction: column; }
-
-      .side-nav {
-        width: 100%;
-        position: static;
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      table {
-        min-width: 540px;
-      }
+      .side-nav { width: 100%; position: static; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      table { min-width: 540px; }
     }
 
     @media (max-width: 480px) {
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      th, td {
-        font-size: 13px;
-        padding: 8px;
-      }
+      .stats { grid-template-columns: 1fr; }
+      th, td { font-size: 13px; padding: 8px; }
     }
   </style>
 </head>
@@ -180,6 +162,7 @@
 
   <div class="main-content">
 
+    <!-- PROFILE -->
     <div class="card">
       <div class="profile-header">
         <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/rory.png" alt="Rory McIlroy">
@@ -187,13 +170,13 @@
         <div>
           <h1>Rory McIlroy</h1>
           <p>PGA Tour | Northern Ireland</p>
-          <p><strong>Born:</strong> Holywood, County Down, Northern Ireland</p>
-          <p><strong>Current Heat Index Rank:</strong> #2</p>
+          <p><strong>Born:</strong> Holywood, Northern Ireland</p>
+          <p><strong>Turned Pro:</strong> 2007</p>
+          <p><strong>Current Heat Index Rank:</strong> #3</p>
 
           <p>
-            Rory McIlroy is currently ranked number two in the PGA Heat Index. His major championship win
-            gives him a huge boost in the formula, and his current-season performance keeps him near the
-            very top of the leaderboard.
+            Rory McIlroy remains one of the top players in the Heat Index thanks to his major championship win.
+            While others have gained ground through multiple wins, his major keeps him firmly in the top tier.
           </p>
 
           <div class="heat-score">Heat Index Score: 16</div>
@@ -201,6 +184,7 @@
       </div>
     </div>
 
+    <!-- STATS -->
     <div class="card">
       <h2>Season Stats</h2>
 
@@ -224,8 +208,10 @@
       </div>
     </div>
 
+    <!-- FORMULA -->
     <div class="card">
       <h2>Heat Index Breakdown</h2>
+
       <p><strong>Formula:</strong> (Wins × 4) + (Top 10s × 2) + (Majors Won × 8) − (Cuts Missed × 2)</p>
 
       <p>
@@ -235,6 +221,7 @@
       </p>
     </div>
 
+    <!-- RESULTS -->
     <div class="card">
       <h2>Recent Results</h2>
 
@@ -251,25 +238,26 @@
             <td>Major Win</td>
           </tr>
           <tr>
-            <td>Recent PGA Event</td>
+            <td>RBC Heritage</td>
             <td>Top 10</td>
-            <td>Top 10 Finish</td>
+            <td>Top 10</td>
           </tr>
           <tr>
-            <td>Recent PGA Event</td>
+            <td>Arnold Palmer Invitational</td>
             <td>Top 10</td>
-            <td>Top 10 Finish</td>
+            <td>Top 10</td>
           </tr>
         </table>
       </div>
     </div>
 
+    <!-- WHY -->
     <div class="card">
-      <h2>Why He’s Ranked #2</h2>
+      <h2>Why He’s Ranked #3</h2>
       <p>
-        Rory is ranked number two because the Heat Index gives extra weight to major championships.
-        Even though Matt Fitzpatrick leads the PGA side with more wins and top 10 finishes, Rory’s
-        Masters win gives him a strong score and keeps him in second place.
+        Rory is ranked number three because his major championship win carries significant weight in the Heat Index,
+        giving him an 8-point boost. Combined with his win and two top 10 finishes, he reaches a total score of 16.
+        He is tied with Cameron Young and Scottie Scheffler, but falls slightly behind due to fewer overall wins this season.
       </p>
     </div>
 
