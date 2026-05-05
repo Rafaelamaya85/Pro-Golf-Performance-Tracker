@@ -109,8 +109,14 @@
       font-weight: bold;
     }
 
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+
     table {
       width: 100%;
+      min-width: 600px;
       border-collapse: collapse;
       margin-top: 10px;
     }
@@ -129,6 +135,19 @@
     tr:nth-child(even) {
       background-color: #f9f9f9;
     }
+
+    @media (max-width: 768px) {
+      body { padding: 12px; }
+      .page-wrapper { flex-direction: column; }
+      .side-nav { width: 100%; position: static; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      table { min-width: 540px; }
+    }
+
+    @media (max-width: 480px) {
+      .stats { grid-template-columns: 1fr; }
+      th, td { font-size: 13px; padding: 8px; }
+    }
   </style>
 </head>
 
@@ -144,34 +163,40 @@
 
   <div class="main-content">
 
+    <!-- PROFILE -->
     <div class="card">
       <div class="profile-header">
         <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/korda_nelly_hs24_470x486.jpg" alt="Nelly Korda">
 
         <div>
-  <h1>Nelly Korda</h1>
-  <p>LPGA Tour | United States</p>
-  <p><strong>Born:</strong> Bradenton, Florida, USA</p>
+          <h1>Nelly Korda</h1>
+          <p>LPGA Tour | United States</p>
+          <p><strong>Born:</strong> Bradenton, Florida, USA</p>
+          <p><strong>Current Heat Index Rank:</strong> #1</p>
 
-  <p>
-    Nelly Korda sits at the top of the LPGA Heat Index after winning the Chevron Championship.
-    Her combination of wins, consistency, and a major victory makes her the hottest player
-    on the LPGA Tour right now.
-  </p>
+          <p>
+            Nelly Korda leads the LPGA Heat Index after adding another win at the Riviera Maya Open at Mayakoba.
+            Her combination of multiple wins, consistent top 10 finishes, and a major championship gives her
+            the highest score on the leaderboard.
+          </p>
 
-  <div class="heat-score">Heat Index Score: 26</div>
-</div>
+          <div class="heat-score">Heat Index Score: 32</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
     <div class="card">
       <h2>Season Stats</h2>
 
       <div class="stats">
         <div class="stat">
           <h3>Wins</h3>
-          <p>2</p>
+          <p>3</p>
         </div>
         <div class="stat">
           <h3>Top 10s</h3>
-          <p>5</p>
+          <p>6</p>
         </div>
         <div class="stat">
           <h3>Majors Won</h3>
@@ -184,59 +209,71 @@
       </div>
     </div>
 
+    <!-- FORMULA -->
     <div class="card">
       <h2>Heat Index Breakdown</h2>
 
+      <p><strong>Formula:</strong> (Wins × 4) + (Top 10s × 2) + (Majors Won × 8) − (Cuts Missed × 2)</p>
+
       <p>
-        (2 × 4) + (5 × 2) + (1 × 8) − (0 × 2)<br>
-        = 8 + 10 + 8 − 0<br>
-        = <strong>26</strong>
+        (3 × 4) + (6 × 2) + (1 × 8) − (0 × 2)<br>
+        = 12 + 12 + 8 − 0<br>
+        = <strong>32</strong>
       </p>
     </div>
 
+    <!-- RESULTS -->
     <div class="card">
       <h2>Recent Results</h2>
 
-      <table>
-        <tr>
-          <th>Tournament</th>
-          <th>Finish</th>
-          <th>Result</th>
-        </tr>
-        <tr>
-          <td>Chevron Championship</td>
-          <td>1st</td>
-          <td>Major Win</td>
-        </tr>
-        <tr>
-          <td>LA Open</td>
-          <td>1st</td>
-          <td>Win</td>
-        </tr>
-        <tr>
-          <td>Drive On Championship</td>
-          <td>T3</td>
-          <td>Top 10</td>
-        </tr>
-        <tr>
-          <td>HSBC Women's World Championship</td>
-          <td>T5</td>
-          <td>Top 10</td>
-        </tr>
-        <tr>
-          <td>Founders Cup</td>
-          <td>T8</td>
-          <td>Top 10</td>
-        </tr>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <tr>
+            <th>Tournament</th>
+            <th>Finish</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>Riviera Maya Open at Mayakoba</td>
+            <td>1st</td>
+            <td>Win</td>
+          </tr>
+          <tr>
+            <td>The Chevron Championship</td>
+            <td>1st</td>
+            <td>Major Win</td>
+          </tr>
+          <tr>
+            <td>LA Open</td>
+            <td>1st</td>
+            <td>Win</td>
+          </tr>
+          <tr>
+            <td>Drive On Championship</td>
+            <td>T3</td>
+            <td>Top 10</td>
+          </tr>
+          <tr>
+            <td>HSBC Women's World Championship</td>
+            <td>T5</td>
+            <td>Top 10</td>
+          </tr>
+          <tr>
+            <td>Founders Cup</td>
+            <td>T8</td>
+            <td>Top 10</td>
+          </tr>
+        </table>
+      </div>
     </div>
 
+    <!-- WHY -->
     <div class="card">
-      <h2>Why She’s Ranked #1 (LPGA)</h2>
+      <h2>Why She’s Ranked #1</h2>
       <p>
-        Nelly leads the LPGA Heat Index because the system heavily rewards winning and major championships.
-        Her victory at the Chevron Championship gives her a major boost, while her consistent top 10 finishes
-        keep her ahead of the field.
+        Nelly is ranked number one because the Heat Index heavily rewards wins and major championships.
+        Her three wins provide 12 points, her six top 10 finishes add 12 more, and her major championship
+        adds an 8-point bonus. With no missed cuts, her total score of 32 places her clearly ahead of the field.
       </p>
     </div>
 
