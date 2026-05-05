@@ -28,3 +28,8 @@ The purpose of this project is to create a simpler and more current way to rank 
 1. Open the live site using the link above
 2. Browse the different pages using the navigation menu
 3. Review the current rankings, explanation of the formula, and past rankings page
+
+## Reflection
+
+You can view my project reflection here:  
+👉 [View REFLECTION.md](REFLECTION.md)
