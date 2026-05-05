@@ -5,7 +5,7 @@ The Heat Index is a golf rankings website that highlights the top 5 hottest play
 ---
 
 ## Live Site
-👉 https://rafaelamaya85.github.io/Pro-Golf-Performance-Tracker/
+https://rafaelamaya85.github.io/Pro-Golf-Performance-Tracker/
 
 ---
 
@@ -59,4 +59,4 @@ Overall, these changes were guided by peer feedback, personal testing, and a foc
 
 ## Reflection
 You can view my project reflection here:  
-👉 [View REFLECTION.md](REFLECTION.md)
+ [View REFLECTION.md](REFLECTION.md)
