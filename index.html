@@ -188,6 +188,7 @@
     .spotlight-score strong {
       font-size: 2rem;
       color: #fbbf24;
+      text-shadow: 0 0 14px rgba(251, 191, 36, 0.75);
     }
 
     .formula {
@@ -250,6 +251,12 @@
       padding: 18px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.08);
       border-top: 5px solid #111827;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.14);
     }
 
     .stat-icon {
@@ -277,6 +284,36 @@
       font-size: 13px;
       color: #6b7280;
       line-height: 1.35;
+    }
+
+    .movement {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 900;
+      vertical-align: middle;
+    }
+
+    .movement.up {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .movement.down {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .movement.same {
+      background: #e5e7eb;
+      color: #374151;
+    }
+
+    .movement.new {
+      background: #dbeafe;
+      color: #1e40af;
     }
 
     .section-block {
@@ -379,6 +416,7 @@
       font-size: 42px;
       font-weight: 800;
       margin-top: 4px;
+      text-shadow: 0 0 14px rgba(251, 191, 36, 0.75);
     }
 
     .rank-list {
@@ -712,7 +750,11 @@
     <div class="featured-info">
       <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Fitzpatrick.jpg" alt="Matt Fitzpatrick">
       <div class="featured-text">
-        <h3><a href="fitzpatrick.html" style="color:white; text-decoration:none;">Matt Fitzpatrick</a></h3>
+        <h3>
+          <a href="fitzpatrick.html" style="color:white; text-decoration:none;">
+            Matt Fitzpatrick <span class="movement same">—</span>
+          </a>
+        </h3>
         <p>Three wins and five top 10 finishes keep Fitzpatrick at the top of the PGA Heat Index.</p>
         <div class="badges">
           <span class="badge">3 Wins</span>
@@ -734,7 +776,9 @@
       <div class="rank-num">2</div>
       <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Cameron.png" alt="Cameron Young">
       <div class="player-main">
-        <a href="cameron.html" class="player-name">Cameron Young</a>
+        <a href="cameron.html" class="player-name">
+          Cameron Young <span class="movement up">↑ 3</span>
+        </a>
         <div class="player-sub">Cadillac Championship win gives him a major jump in the Heat Index.</div>
         <div class="mini-stats">
           <span class="mini-stat">2 Wins</span>
@@ -753,7 +797,9 @@
       <div class="rank-num">3</div>
       <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/rory.png" alt="Rory McIlroy">
       <div class="player-main">
-        <a href="rory.html" class="player-name">Rory McIlroy</a>
+        <a href="rory.html" class="player-name">
+          Rory McIlroy <span class="movement down">↓ 1</span>
+        </a>
         <div class="player-sub">A major win keeps Rory near the top of the Heat Index.</div>
         <div class="mini-stats">
           <span class="mini-stat">1 Win</span>
@@ -772,7 +818,9 @@
       <div class="rank-num">4</div>
       <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/Scotty_46046.webp" alt="Scottie Scheffler">
       <div class="player-main">
-        <a href="scottie.html" class="player-name">Scottie Scheffler</a>
+        <a href="scottie.html" class="player-name">
+          Scottie Scheffler <span class="movement same">—</span>
+        </a>
         <div class="player-sub">Runner-up at Cadillac adds another top 10 finish.</div>
         <div class="mini-stats">
           <span class="mini-stat">1 Win</span>
@@ -791,7 +839,9 @@
       <div class="rank-num">5</div>
       <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/collin.jpg" alt="Collin Morikawa">
       <div class="player-main">
-        <a href="collin.html" class="player-name">Collin Morikawa</a>
+        <a href="collin.html" class="player-name">
+          Collin Morikawa <span class="movement down">↓ 1</span>
+        </a>
         <div class="player-sub">Consistent top 10 finishes keep Morikawa inside the top five.</div>
         <div class="mini-stats">
           <span class="mini-stat">0 Wins</span>
@@ -835,7 +885,7 @@
       <div class="featured-text">
         <h3>
           <a href="nelly.html" style="color:white; text-decoration:none;">
-            Nelly Korda
+            Nelly Korda <span class="movement same">—</span>
           </a>
         </h3>
         <p>Riviera Maya Open winner. Another victory extends her lead at the top of the LPGA Heat Index.</p>
@@ -859,7 +909,9 @@
       <div class="rank-num">2</div>
       <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/green.jpg" alt="Hannah Green">
       <div class="player-main">
-        <a href="hannah.html" class="player-name">Hannah Green</a>
+        <a href="hannah.html" class="player-name">
+          Hannah Green <span class="movement same">—</span>
+        </a>
         <div class="player-sub">Still holds the second spot with two wins and steady top-10 results.</div>
         <div class="mini-stats">
           <span class="mini-stat">2 Wins</span>
@@ -878,7 +930,9 @@
       <div class="rank-num">3</div>
       <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/kim.jpg" alt="Hyo Joo Kim">
       <div class="player-main">
-        <a href="kim.html" class="player-name">Hyo Joo Kim</a>
+        <a href="kim.html" class="player-name">
+          Hyo Joo Kim <span class="movement same">—</span>
+        </a>
         <div class="player-sub">Two wins and four top 10s keep her tied near the top of the LPGA board.</div>
         <div class="mini-stats">
           <span class="mini-stat">2 Wins</span>
@@ -897,7 +951,9 @@
       <div class="rank-num">4</div>
       <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/ryu.jpg" alt="Hae Ran Ryu">
       <div class="player-main">
-        <a href="ryu.html" class="player-name">Hae Ran Ryu</a>
+        <a href="ryu.html" class="player-name">
+          Hae Ran Ryu <span class="movement up">↑ 1</span>
+        </a>
         <div class="player-sub">Consistent early-season play keeps her inside the LPGA top five.</div>
         <div class="mini-stats">
           <span class="mini-stat">0 Wins</span>
@@ -916,7 +972,9 @@
       <div class="rank-num">5</div>
       <img src="https://raw.githubusercontent.com/Rafaelamaya85/Pro-Golf-Performance-Tracker/main/jeeno.jpg" alt="Jeeno Thitikul">
       <div class="player-main">
-        <a href="jeeno.html" class="player-name">Jeeno Thitikul</a>
+        <a href="jeeno.html" class="player-name">
+          Jeeno Thitikul <span class="movement down">↓ 1</span>
+        </a>
         <div class="player-sub">Still in the top five, but the missed cut at Chevron keeps her score lower.</div>
         <div class="mini-stats">
           <span class="mini-stat">1 Win</span>
