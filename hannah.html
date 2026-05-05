@@ -29,6 +29,7 @@
       border-radius: 12px;
       position: sticky;
       top: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .side-nav a {
@@ -137,32 +138,15 @@
 
     @media (max-width: 768px) {
       body { padding: 12px; }
-
       .page-wrapper { flex-direction: column; }
-
-      .side-nav {
-        width: 100%;
-        position: static;
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      table {
-        min-width: 540px;
-      }
+      .side-nav { width: 100%; position: static; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      table { min-width: 540px; }
     }
 
     @media (max-width: 480px) {
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      th, td {
-        font-size: 13px;
-        padding: 8px;
-      }
+      .stats { grid-template-columns: 1fr; }
+      th, td { font-size: 13px; padding: 8px; }
     }
   </style>
 </head>
@@ -192,7 +176,8 @@
 
           <p>
             Hannah Green is currently ranked number two in the LPGA Heat Index.
-            Her winning form and strong top 10 finishes keep her near the top of the leaderboard.
+            Her two wins and strong top 10 results keep her near the top of the leaderboard,
+            just behind Nelly Korda.
           </p>
 
           <div class="heat-score">Heat Index Score: 14</div>
@@ -225,6 +210,7 @@
 
     <div class="card">
       <h2>Heat Index Breakdown</h2>
+
       <p><strong>Formula:</strong> (Wins × 4) + (Top 10s × 2) + (Majors Won × 8) − (Cuts Missed × 2)</p>
 
       <p>
@@ -245,7 +231,7 @@
             <th>Result</th>
           </tr>
           <tr>
-            <td>Chevron Championship</td>
+            <td>The Chevron Championship</td>
             <td>Top 10</td>
             <td>Top 10 Finish</td>
           </tr>
@@ -276,9 +262,9 @@
     <div class="card">
       <h2>Why She’s Ranked #2</h2>
       <p>
-        Hannah is ranked number two because the Heat Index rewards wins and consistent top 10 finishes.
-        Her two wins and four top 10s give her a strong score, but the missed cut keeps her slightly behind
-        Nelly Korda on the current LPGA leaderboard.
+        Hannah is ranked number two because the Heat Index rewards winning and consistent top 10 finishes.
+        Her two wins give her 8 points, and her four top 10 finishes add another 8 points.
+        The missed cut lowers her score by 2 points, giving her a total Heat Index score of 14.
       </p>
     </div>
 
